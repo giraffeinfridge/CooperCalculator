@@ -196,83 +196,80 @@ public class MetricConverter {
 				{
 			case 1:
 				unit = "oz";
-				System.out.print("ounces");
+				System.out.println("ounces");
 			break;
 			
 			case 2:
 				unit = "mg";
-				System.out.print("milligrams");
+				System.out.println("milligrams");
 			break;
 			
 			case 3:
 				unit = "g";
-				System.out.print("grams");
+				System.out.println("grams");
 			break;
 			
 			case 4:
 				unit = "kg";
-				System.out.print("kilograms");
+				System.out.println("kilograms");
 			break;
 			
 			case 5:
 				unit = "lbs";
-				System.out.print("lbs");
+				System.out.println("lbs");
 			break;
 			
 			case 6:
 				unit = "N";
-				System.out.print("newtons");
+				System.out.println("newtons");
 			break;
 			
 			case 7:
 				unit = "tons";
-				System.out.print("(metric) tons");
+				System.out.println("(metric) tons");
 			break;
 				}
 			
-				System.out.print(" -> ");
+			System.out.println();
+			System.out.println("to");
+			System.out.println();
 			
 			switch (weightoptwo)
 			{
 			case 1:
 				unittwo = "oz";
-				System.out.print("ounces");
+				System.out.println("ounces");
 			break;
 		
 			case 2:
 				unittwo = "mg";
-				System.out.print("milligrams");
+				System.out.println("milligrams");
 			break;
 		
 			case 3:
 				unittwo = "g";
-				System.out.print("grams");
+				System.out.println("grams");
 			break;
 		
 			case 4:
 				unittwo = "kg";
-				System.out.print("kilograms");
+				System.out.println("kilograms");
 			break;
 		
 			case 5:
 				unittwo = "lbs";
-				System.out.print("lbs");
+				System.out.println("lbs");
 			break;
 		
 			case 6:
 				unittwo = "N";
-				System.out.print("newtons");
+				System.out.println("newtons");
 			break;
 		
 			case 7:
 				unittwo = "tons";
-				System.out.print("(metric) tons");
+				System.out.println("(metric) tons");
 			break;
-		
-			}
-			
-			if ((weightop < 1) || (weightoptwo > 7)) {
-				System.out.println("There are no units associated with this number");
 			}
 		
 			System.out.println();
