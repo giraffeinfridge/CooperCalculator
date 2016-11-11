@@ -1,4 +1,3 @@
-//Hello there
 import java.util.Scanner;
 public class MetricConverter {
 
@@ -57,26 +56,25 @@ public class MetricConverter {
 			
 			System.out.println();
 			
-			if (distanceop == 1) {System.out.println(); System.out.println("millimeters"); unit = "mm";}
-			else if (distanceop == 2) {System.out.println(); System.out.println("centimeters"); unit = "cm";}
-			else if (distanceop == 3) {System.out.println(); System.out.println("inches"); unit = "in";}
-			else if (distanceop == 4) {System.out.println(); System.out.println("feet"); unit = "ft";}
-			else if (distanceop == 5) {System.out.println(); System.out.println("yards"); unit = "yrds";}
-			else if (distanceop == 6) {System.out.println(); System.out.println("meters"); unit = "m";}
-			else if (distanceop == 7) {System.out.println(); System.out.println("kilometers"); unit = "km";}
-			else if (distanceop == 8) {System.out.println(); System.out.println("miles"); unit = "mi";}
+			if (distanceop == 1) {System.out.println(); System.out.print("millimeters"); unit = "mm";}
+			else if (distanceop == 2) {System.out.println(); System.out.print("centimeters"); unit = "cm";}
+			else if (distanceop == 3) {System.out.println(); System.out.print("inches"); unit = "in";}
+			else if (distanceop == 4) {System.out.println(); System.out.print("feet"); unit = "ft";}
+			else if (distanceop == 5) {System.out.println(); System.out.print("yards"); unit = "yrds";}
+			else if (distanceop == 6) {System.out.println(); System.out.print("meters"); unit = "m";}
+			else if (distanceop == 7) {System.out.println(); System.out.print("kilometers"); unit = "km";}
+			else if (distanceop == 8) {System.out.println(); System.out.print("miles"); unit = "mi";}
 			
-			System.out.println();
-			System.out.println("to");
+			System.out.print(" -> ");
 			
-			if (distanceoptwo == 1) {System.out.println(); System.out.println("millimeters"); unittwo = "mm";}
-			else if (distanceoptwo == 2) {System.out.println(); System.out.println("centimeters"); unittwo = "cm";}
-			else if (distanceoptwo == 3) {System.out.println(); System.out.println("inches"); unittwo = "in";}
-			else if (distanceoptwo == 4) {System.out.println(); System.out.println("feet"); unittwo = "ft";}
-			else if (distanceoptwo == 5) {System.out.println(); System.out.println("yards"); unittwo = "yrds";}
-			else if (distanceoptwo == 6) {System.out.println(); System.out.println("meters"); unittwo = "m";}
-			else if (distanceoptwo == 7) {System.out.println(); System.out.println("kilometers"); unittwo = "km";}
-			else if (distanceoptwo == 8) {System.out.println(); System.out.println("miles"); unittwo = "mi";}
+			if (distanceoptwo == 1) {System.out.print("millimeters"); unittwo = "mm";}
+			else if (distanceoptwo == 2) {System.out.print("centimeters"); unittwo = "cm";}
+			else if (distanceoptwo == 3) {System.out.print("inches"); unittwo = "in";}
+			else if (distanceoptwo == 4) {System.out.print("feet"); unittwo = "ft";}
+			else if (distanceoptwo == 5) {System.out.print("yards"); unittwo = "yrds";}
+			else if (distanceoptwo == 6) {System.out.print("meters"); unittwo = "m";}
+			else if (distanceoptwo == 7) {System.out.print("kilometers"); unittwo = "km";}
+			else if (distanceoptwo == 8) {System.out.print("miles"); unittwo = "mi";}
 			
 			System.out.println();
 			System.out.println();
