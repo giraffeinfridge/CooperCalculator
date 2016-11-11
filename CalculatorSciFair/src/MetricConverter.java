@@ -276,9 +276,6 @@ public class MetricConverter {
 			System.out.println();
 			
 			System.out.println(amount + " " + unit + " = ? " + unittwo);
-		
-			
-			///if (weightop)
 			
 			switch(weightop)
 				{
@@ -318,6 +315,24 @@ public class MetricConverter {
 							break;
 							
 							case 3:
+								amount = (float) amount * 0.001f;
+							break;
+							
+							case 4:
+								amount = (float) amount * 0.000001000000f;
+							break;
+							
+							case 5:
+								amount = (float) amount * 0.0000022f;
+							break;
+								
+							case 6:
+								amount = (float) amount * 0.0000098f;
+							break;
+							
+							case 7:
+								amount = (float) amount * 0.000000001f;
+							break;
 						}
 				}
 			
