@@ -1,4 +1,4 @@
-///hi
+//Hello there
 import java.util.Scanner;
 public class MetricConverter {
 
