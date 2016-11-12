@@ -88,10 +88,9 @@ public class MetricConverter {
 				break;
 			case 8:
 				System.out.print("\nmiles");
-				unit="mi";
+				unit = "mi";
 				break;
 			}
-			
 
 			System.out.print(" -> ");
 
@@ -126,13 +125,11 @@ public class MetricConverter {
 				break;
 			case 8:
 				System.out.print("miles");
-				unit="mi";
+				unit = "mi";
 				break;
 			}
-			
-			System.out.println();
-			System.out.println();
-			System.out.println();
+
+			System.out.println("\n\n\n");
 
 			System.out.println(amount + " " + unit + " = ? " + unittwo);
 
@@ -150,174 +147,208 @@ public class MetricConverter {
 
 			System.out.println();
 
-			if (distanceop == 1 && distanceoptwo == 2) {
-				amount = (float) amount / 10;
-			} /// mm to cm
-			else if (distanceop == 1 && distanceoptwo == 3) {
-				amount = (float) (amount / 25.4);
-			} /// mm to in
-			else if (distanceop == 1 && distanceoptwo == 4) {
-				amount = (float) (amount / 304.8);
-			} /// mm to ft
-			else if (distanceop == 1 && distanceoptwo == 5) {
-				amount = (float) (amount / 914.4);
-			} /// mm to yrds
-			else if (distanceop == 1 && distanceoptwo == 6) {
-				amount = (float) (amount / 1000);
-			} /// mm to m
-			else if (distanceop == 1 && distanceoptwo == 7) {
-				amount = (float) (amount / 100000);
-			} /// mm to km
-			else if (distanceop == 1 && distanceoptwo == 8) {
-				amount = (float) (amount / 1609344);
-			} /// mm to mi
-			else if (distanceop == 2 && distanceoptwo == 1) {
-				amount = (float) (amount * 10);
-			} /// cm to mm
-			else if (distanceop == 2 && distanceoptwo == 3) {
-				amount = (float) (amount / 2.54);
-			} /// cm to in
-			else if (distanceop == 2 && distanceoptwo == 4) {
-				amount = (float) (amount / 30.48);
-			} /// cm to ft
-			else if (distanceop == 2 && distanceoptwo == 5) {
-				amount = (float) (amount / 91.44);
-			} /// cm to yrds
-			else if (distanceop == 2 && distanceoptwo == 6) {
-				amount = (float) (amount / 100);
-			} /// cm to m
-			else if (distanceop == 2 && distanceoptwo == 7) {
-				amount = (float) (amount / 100000);
-			} /// cm to km
-			else if (distanceop == 2 && distanceoptwo == 8) {
-				amount = (float) (amount / 160934);
-			} /// cm to mi
-			else if (distanceop == 3 && distanceoptwo == 1) {
-				amount = (float) (amount * 25.4);
-			} /// in to mm
-			else if (distanceop == 3 && distanceoptwo == 2) {
-				amount = (float) (amount * 2.54);
-			} /// in to cm
-			else if (distanceop == 3 && distanceoptwo == 4) {
-				amount = (float) (amount * 0.0833333);
-			} /// in to ft
-			else if (distanceop == 3 && distanceoptwo == 5) {
-				amount = (float) (amount * 0.0277778);
-			} /// in to yrds
-			else if (distanceop == 3 && distanceoptwo == 6) {
-				amount = (float) (amount * 0.0254);
-			} /// in to m
-			else if (distanceop == 3 && distanceoptwo == 7) {
-				amount = (float) (amount * 0.0000254);
-			} /// in to km
-			else if (distanceop == 3 && distanceoptwo == 8) {
-				amount = (float) (amount * 0.00001578);
-			} /// in to mi
-			else if (distanceop == 4 && distanceoptwo == 1) {
-				amount = (float) (amount * 304.8);
-			} /// ft to mm
-			else if (distanceop == 4 && distanceoptwo == 2) {
-				amount = (float) (amount * 30.48);
-			} /// ft to cm
-			else if (distanceop == 4 && distanceoptwo == 3) {
-				amount = (float) (amount * 12);
-			} /// ft to in
-			else if (distanceop == 4 && distanceoptwo == 5) {
-				amount = (float) (amount * 0.333333);
-			} /// ft to yrds
-			else if (distanceop == 4 && distanceoptwo == 6) {
-				amount = (float) (amount * 0.3048);
-			} /// ft to m
-			else if (distanceop == 4 && distanceoptwo == 7) {
-				amount = (float) (amount * 0.0003048);
-			} /// ft to km
-			else if (distanceop == 4 && distanceoptwo == 8) {
-				amount = (float) (amount * 0.000189394);
-			} /// ft to mi
-			else if (distanceop == 5 && distanceoptwo == 1) {
-				amount = (float) (amount * 914.4);
-			} /// yrds to mm
-			else if (distanceop == 5 && distanceoptwo == 2) {
-				amount = (float) (amount * 91.44);
-			} /// yrds to cm
-			else if (distanceop == 5 && distanceoptwo == 3) {
-				amount = (float) (amount * 36);
-			} /// yrds to in
-			else if (distanceop == 5 && distanceoptwo == 4) {
-				amount = (float) (amount * 3);
-			} /// yrds to ft
-			else if (distanceop == 5 && distanceoptwo == 6) {
-				amount = (float) (amount * 0.9144);
-			} /// yrds to m
-			else if (distanceop == 5 && distanceoptwo == 7) {
-				amount = (float) (amount * 0.0009144);
-			} /// yrds to km
-			else if (distanceop == 5 && distanceoptwo == 8) {
-				amount = (float) (amount * 0.000568182);
-			} /// yrds to mi
-			else if (distanceop == 6 && distanceoptwo == 1) {
-				amount = (float) (amount * 1000);
-			} /// m to mm
-			else if (distanceop == 6 && distanceoptwo == 2) {
-				amount = (float) (amount * 100);
-			} /// m to cm
-			else if (distanceop == 6 && distanceoptwo == 3) {
-				amount = (float) (amount * 39.3701);
-			} /// m to in
-			else if (distanceop == 6 && distanceoptwo == 4) {
-				amount = (float) (amount * 3.28084);
-			} /// m to ft
-			else if (distanceop == 6 && distanceoptwo == 6) {
-				amount = (float) (amount * 1.09361);
-			} /// m to yrds
-			else if (distanceop == 6 && distanceoptwo == 7) {
-				amount = (float) (amount * 0.001);
-			} /// m to km
-			else if (distanceop == 6 && distanceoptwo == 8) {
-				amount = (float) (amount * 0.000621371);
-			} /// m to mi
-			else if (distanceop == 7 && distanceoptwo == 1) {
-				amount = (float) (amount * 1000000);
-			} /// km to mm
-			else if (distanceop == 7 && distanceoptwo == 2) {
-				amount = (float) (amount * 100000);
-			} /// km to cm
-			else if (distanceop == 7 && distanceoptwo == 3) {
-				amount = (float) (amount * 39370.1);
-			} /// km to in
-			else if (distanceop == 7 && distanceoptwo == 4) {
-				amount = (float) (amount * 3280.84);
-			} /// km to ft
-			else if (distanceop == 7 && distanceoptwo == 5) {
-				amount = (float) (amount * 1093.61);
-			} /// km to yrds
-			else if (distanceop == 7 && distanceoptwo == 6) {
-				amount = (float) (amount * 1000);
-			} /// km to m
-			else if (distanceop == 7 && distanceoptwo == 8) {
-				amount = (float) (amount * 0.621371);
-			} /// km to mi
-			else if (distanceop == 8 && distanceoptwo == 1) {
-				amount = (float) (amount * 1609344);
-			} /// mi to mm
-			else if (distanceop == 8 && distanceoptwo == 2) {
-				amount = (float) (amount * 160934);
-			} /// mi to cm
-			else if (distanceop == 8 && distanceoptwo == 3) {
-				amount = (float) (amount * 63360);
-			} /// mi to in
-			else if (distanceop == 8 && distanceoptwo == 4) {
-				amount = (float) (amount * 5280);
-			} /// mi to ft
-			else if (distanceop == 8 && distanceoptwo == 5) {
-				amount = (float) (amount * 1760);
-			} /// mi to yrds
-			else if (distanceop == 8 && distanceoptwo == 6) {
-				amount = (float) (amount * 1609.34);
-			} /// mi to m
-			else if (distanceop == 8 && distanceoptwo == 7) {
-				amount = (float) (amount * 1.60934);
-			} /// mi to km
+			switch (distanceop) {
+			case 1:
+				switch (distanceoptwo) {
+				case 2:
+					amount = (float) amount / 10; // mm -> cm
+					break;
+				case 3:
+					amount = (float) (amount / 25.4); // mm -> in
+					break;
+				case 4:
+					amount = (float) (amount / 304.8); // mm -> ft
+					break;
+				case 5:
+					amount = (float) (amount / 914.4); // mm -> yards
+					break;
+				case 6:
+					amount = (float) (amount / 1000); // mm -> m
+					break;
+				case 7:
+					amount = (float) (amount / 100000); // mm -> km
+					break;
+				case 8:
+					amount = (float) (amount / 1609344); // mm -> mi
+					break;
+				}
+				break;
+			case 2:
+				switch (distanceoptwo) {
+				case 1:
+					amount = (float) (amount * 10); // cm -> mm
+					break;
+				case 3:
+					amount = (float) (amount / 2.54); // cm -> in
+					break;
+				case 4:
+					amount = (float) (amount / 30.48); // cm -> ft
+					break;
+				case 5:
+					amount = (float) (amount / 91.44); // cm -> yrds
+					break;
+				case 6:
+					amount = (float) (amount / 100); // cm to m
+					break;
+				case 7:
+					amount = (float) (amount / 100000);// cm to km
+					break;
+				case 8:
+					amount = (float) (amount / 160934);// cm to mi
+					break;
+				}
+				break;
+			case 3:
+				switch (distanceoptwo) {
+				case 1:
+					amount = (float) (amount * 25.4);// in to mm
+					break;
+				case 2:
+					amount = (float) (amount * 2.54);// in to cm
+					break;
+				case 4:
+					amount = (float) (amount * 0.0833333);// in to ft
+					break;
+				case 5:
+					amount = (float) (amount * 0.0277778);// in to yrds
+					break;
+				case 6:
+					amount = (float) (amount * 0.0254);// in to m
+					break;
+				case 7:
+					amount = (float) (amount * 0.0000254);// in to km
+					break;
+				case 8:
+					amount = (float) (amount * 0.00001578);// in to mi
+					break;
+				}
+				break;
+			case 4:
+				switch (distanceoptwo) {
+				case 1:
+					amount = (float) (amount * 304.8);// ft to mm
+					break;
+				case 2:
+					amount = (float) (amount * 30.48);// ft to cm
+					break;
+				case 3:
+					amount = (float) (amount * 12);// ft to in
+					break;
+				case 5:
+					amount = (float) (amount * 0.333333);// ft to yrds
+					break;
+				case 6:
+					amount = (float) (amount * 0.3048);// ft to m
+					break;
+				case 7:
+					amount = (float) (amount * 0.0003048);// ft to km
+					break;
+				case 8:
+					amount = (float) (amount * 0.000189394);// ft to mi
+					break;
+				}
+				break;
+			case 5:
+				switch (distanceoptwo) {
+				case 1:
+					amount = (float) (amount * 914.4);// yrds to mm
+					break;
+				case 2:
+					amount = (float) (amount * 91.44);// yrds to cm
+					break;
+				case 3:
+					amount = (float) (amount * 36);// yrds to in
+					break;
+				case 4:
+					amount = (float) (amount * 3);// yrds to ft
+					break;
+				case 6:
+					amount = (float) (amount * 0.9144);// yrds to m
+					break;
+				case 7:
+					amount = (float) (amount * 0.0009144);// yrds to km
+					break;
+				case 8:
+					amount = (float) (amount * 0.000568182);// yrds to mi
+					break;
+				}
+				break;
+			case 6:
+				switch (distanceoptwo) {
+				case 1:
+					amount = (float) (amount * 1000);// m to mm
+					break;
+				case 2:
+					amount = (float) (amount * 100);// m to cm
+					break;
+				case 3:
+					amount = (float) (amount * 39.3701);// m to in
+					break;
+				case 4:
+					amount = (float) (amount * 3.28084);// m to ft
+					break;
+				case 5:
+					amount = (float) (amount * 1.09361);// m to yrds
+					break;
+				case 7:
+					amount = (float) (amount * 0.001);// m to km
+					break;
+				case 8:
+					amount = (float) (amount * 0.000621371);// m to mi
+					break;
+				}
+				break;
+			case 7:
+				switch (distanceoptwo) {
+				case 1:
+					amount = (float) (amount * 1000000);// km to mm
+					break;
+				case 2:
+					amount = (float) (amount * 100000);// km to cm
+					break;
+				case 3:
+					amount = (float) (amount * 39370.1);// km to in
+					break;
+				case 4:
+					amount = (float) (amount * 3280.84);// km to ft
+					break;
+				case 5:
+					amount = (float) (amount * 1093.61);// km to yrds
+					break;
+				case 6:
+					amount = (float) (amount * 1000);// km to m
+					break;
+				case 8:
+					amount = (float) (amount * 0.621371);// km to mi
+					break;
+				}
+				break;
+			case 8:
+				switch (distanceoptwo) {
+				case 1:
+					amount = (float) (amount * 1609344);// mi to mm
+					break;
+				case 2:
+					amount = (float) (amount * 160934);// mi to cm
+					break;
+				case 3:
+					amount = (float) (amount * 63360);// mi to in
+					break;
+				case 4:
+					amount = (float) (amount * 5280);// mi to ft
+					break;
+				case 5:
+					amount = (float) (amount * 1760);// mi to yrds
+					break;
+				case 6:
+					amount = (float) (amount * 1609.34);// mi to m
+					break;
+				case 7:
+					amount = (float) (amount * 1.60934);// mi to km
+					break;
+				}
+				break;
+			}
 
 			System.out.println(amount + " " + unittwo);
 
