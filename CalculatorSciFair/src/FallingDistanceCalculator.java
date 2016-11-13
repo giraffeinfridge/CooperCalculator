@@ -4,6 +4,12 @@ public class FallingDistanceCalculator {
 	public static void main(String[] args) {
 		Scanner value = new Scanner (System.in);
 		
+		System.out.println("This calculator is based around the common units");
+		System.out.println("of meters and seconds that relate/correspond to");
+		System.out.println("the constant gravitational pull of the Earth");
+		
+		System.out.println();
+		
 		System.out.println("Time: ");
 		
 		float time = value.nextFloat();
@@ -12,7 +18,7 @@ public class FallingDistanceCalculator {
 		
 		System.out.println();
 		
-		System.out.println(answer + "m");
+		System.out.println(answer + " m");
 		
 		try {
 			Thread.sleep(1000);
