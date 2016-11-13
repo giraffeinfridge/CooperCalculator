@@ -4,14 +4,30 @@ public class ForceCalculator {
 	public static void main(String[] args) {
 		Scanner forcecalc = new Scanner (System.in);
 		
+		int altsol = 0;
 		
 		System.out.println("Mass: ");
 		
-		float mass = forcecalc.nextFloat();
+		float mass = -1; 
+		while(mass < 0)
+		{
+			mass = forcecalc.nextFloat();
+			if(mass < 0)
+			{
+				System.out.println("Impossible value, nice try.");
+				System.out.println();
+				System.out.println("Re-enter Mass: ");
+			}
+		}
 		
 		System.out.println("Acceleration: ");
 		
 		float accel = forcecalc.nextFloat();
+		
+		if (accel<0) {
+			accel = accel * (-1);
+			altsol = 1;
+		}
 		
 		float answer = mass * accel;
 		
@@ -73,6 +89,25 @@ public class ForceCalculator {
 			
 			System.out.println("F = " + answer);
 			
+			try {
+				Thread.sleep(1000);
+			}	catch(InterruptedException balls) {
+				Thread.currentThread().interrupt();
+			}
+			
+			if (altsol == 1) {
+				System.out.println();
+				System.out.println("The reason that the inputed acceleration");
+				System.out.println("changed to a positive number is because");
+				System.out.println("a negative force is impossible but a negative");
+				System.out.println("acceleration is possible, though it only means");
+				System.out.println("a change in the acceleration of the object");
+				System.out.println("so the acceleration being negative wouldn't");
+				System.out.println("affect the way the world perceives the force,");
+				System.out.println("but in order for the formula F = ma to work");
+				System.out.println("the acceleration would have to temporarily be");
+				System.out.println("converted to a positive number");
+			}
 			
 		
 		
