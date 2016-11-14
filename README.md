@@ -1,7 +1,7 @@
 # CooperCalculator
 By Cooper Wainczak
 
-This project is designed for the Science Fair event of Hampde Charter School of Science.
+This project is designed for the Science Fair event of Hampden Charter School of Science.
 
 ## What it is
 
