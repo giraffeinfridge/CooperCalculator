@@ -72,7 +72,7 @@ public class ConstantSpeedCalculator {
 				}
 
 				System.out.println("D = " + answer);
-
+				
 			}else if(helper == 0){
 				on = false;
 				break;
