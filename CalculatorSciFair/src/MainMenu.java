@@ -9,7 +9,7 @@ public class MainMenu {
 		boolean on = true;
 		while (on) {
 			System.out.println("What would you like to calculate? ");
-			System.out.println("\n[0]  Quit\nPhysics\n[1]  ImpulseCalculator");
+			System.out.println("\n[0]  Quit\nPhysics\n[1]  Impulse\nMath\n[2] Basic Expression ");
 			int input = in.nextInt();
 			switch (input) {
 			case 0:
@@ -17,6 +17,9 @@ public class MainMenu {
 				return;
 			case 1:
 				ic.init();
+				break;
+			case 2:
+				BasicCalculator.init();
 				break;
 			}
 		}
