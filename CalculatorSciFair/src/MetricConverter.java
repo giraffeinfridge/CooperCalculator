@@ -25,23 +25,25 @@ public class MetricConverter {
 
 		if (option == 1) {
 			System.out.println();
-			System.out.println("'1' : millimeters");
-			System.out.println("'2' : centimeters");
-			System.out.println("'3' : inches");
-			System.out.println("'4' : feet");
-			System.out.println("'5' : yards");
-			System.out.println("'6' : meters");
-			System.out.println("'7' : kilometers");
-			System.out.println("'8' : miles");
+			System.out.println("'mm'  : millimeters");
+			System.out.println("'cm'  : centimeters");
+			System.out.println("'in'  : inches");
+			System.out.println("'ft'  : feet");
+			System.out.println("'yrds': yards");
+			System.out.println("'m'   : meters");
+			System.out.println("'km'  : kilometers");
+			System.out.println("'mi'  : miles");
 			System.out.println();
 
-			System.out.println("Use the number that corresponds with each unit");
+			System.out.println("Use the abbreviation that corresponds with each unit");
 
 			System.out.println();
 
 			System.out.println("Starting unit?");
 
-			int distanceop = sdcalc.nextInt();
+			String iti = sdcalc.next();
+			
+			//int distanceop = sdcalc.nextInt();
 
 			System.out.println();
 
@@ -53,40 +55,42 @@ public class MetricConverter {
 
 			System.out.println("What unit are you converting to?");
 
-			int distanceoptwo = sdcalc.nextInt();
+			String ititwo = sdcalc.next();
+			
+			//int distanceoptwo = sdcalc.nextInt();
 
 			System.out.println();
 
-			switch (distanceop) {
-			case 1:
+			switch (iti) {
+			case "mm":
 				System.out.print("\nmillimeters");
 				unit = "mm";
 				break;
-			case 2:
+			case "cm":
 				System.out.print("\ncentimeters");
 				unit = "cm";
 				break;
-			case 3:
+			case "in":
 				System.out.print("\ninches");
 				unit = "in";
 				break;
-			case 4:
+			case "ft":
 				System.out.print("\nfeet");
 				unit = "ft";
 				break;
-			case 5:
+			case "yrds":
 				System.out.print("\nyards");
 				unit = "yrds";
 				break;
-			case 6:
+			case "m":
 				System.out.print("\nmeters");
 				unit = "m";
 				break;
-			case 7:
+			case "km":
 				System.out.print("\nkilometers");
 				unit = "km";
 				break;
-			case 8:
+			case "mi":
 				System.out.print("\nmiles");
 				unit = "mi";
 				break;
@@ -94,36 +98,36 @@ public class MetricConverter {
 
 			System.out.print(" -> ");
 
-			switch (distanceoptwo) {
-			case 1:
+			switch (ititwo) {
+			case "mm":
 				System.out.print("millimeters");
 				unittwo = "mm";
 				break;
-			case 2:
+			case "cm":
 				System.out.print("centimeters");
 				unittwo = "cm";
 				break;
-			case 3:
+			case "in":
 				System.out.print("inches");
 				unittwo = "in";
 				break;
-			case 4:
+			case "ft":
 				System.out.print("feet");
 				unittwo = "ft";
 				break;
-			case 5:
+			case "yrds":
 				System.out.print("yards");
 				unittwo = "yrds";
 				break;
-			case 6:
+			case "m":
 				System.out.print("meters");
 				unittwo = "m";
 				break;
-			case 7:
+			case "km":
 				System.out.print("kilometers");
 				unittwo = "km";
 				break;
-			case 8:
+			case "mi":
 				System.out.print("miles");
 				unit = "mi";
 				break;
@@ -141,209 +145,209 @@ public class MetricConverter {
 
 			System.out.println();
 
-			if (distanceop == distanceoptwo) {
+			if (iti.equals(ititwo)) {
 				System.out.println("They are the same unit");
 			}
 
 			System.out.println();
 
-			switch (distanceop) {
-			case 1:
-				switch (distanceoptwo) {
-				case 2:
+			switch (iti) {
+			case "mm":
+				switch (ititwo) {
+				case "cm":
 					amount = (float) amount / 10; // mm -> cm
 					break;
-				case 3:
+				case "in":
 					amount = (float) (amount / 25.4); // mm -> in
 					break;
-				case 4:
+				case "ft":
 					amount = (float) (amount / 304.8); // mm -> ft
 					break;
-				case 5:
+				case "yrds":
 					amount = (float) (amount / 914.4); // mm -> yards
 					break;
-				case 6:
+				case "m":
 					amount = (float) (amount / 1000); // mm -> m
 					break;
-				case 7:
+				case "km":
 					amount = (float) (amount / 100000); // mm -> km
 					break;
-				case 8:
+				case "mi":
 					amount = (float) (amount / 1609344); // mm -> mi
 					break;
 				}
 				break;
-			case 2:
-				switch (distanceoptwo) {
-				case 1:
+			case "cm":
+				switch (ititwo) {
+				case "mm":
 					amount = (float) (amount * 10); // cm -> mm
 					break;
-				case 3:
+				case "in":
 					amount = (float) (amount / 2.54); // cm -> in
 					break;
-				case 4:
+				case "ft":
 					amount = (float) (amount / 30.48); // cm -> ft
 					break;
-				case 5:
+				case "yrds":
 					amount = (float) (amount / 91.44); // cm -> yrds
 					break;
-				case 6:
+				case "m":
 					amount = (float) (amount / 100); // cm to m
 					break;
-				case 7:
+				case "km":
 					amount = (float) (amount / 100000);// cm to km
 					break;
-				case 8:
+				case "mi":
 					amount = (float) (amount / 160934);// cm to mi
 					break;
 				}
 				break;
-			case 3:
-				switch (distanceoptwo) {
-				case 1:
+			case "in":
+				switch (ititwo) {
+				case "mm":
 					amount = (float) (amount * 25.4);// in to mm
 					break;
-				case 2:
+				case "cm":
 					amount = (float) (amount * 2.54);// in to cm
 					break;
-				case 4:
+				case "ft":
 					amount = (float) (amount * 0.0833333);// in to ft
 					break;
-				case 5:
+				case "yrds":
 					amount = (float) (amount * 0.0277778);// in to yrds
 					break;
-				case 6:
+				case "m":
 					amount = (float) (amount * 0.0254);// in to m
 					break;
-				case 7:
+				case "km":
 					amount = (float) (amount * 0.0000254);// in to km
 					break;
-				case 8:
+				case "mi":
 					amount = (float) (amount * 0.00001578);// in to mi
 					break;
 				}
 				break;
-			case 4:
-				switch (distanceoptwo) {
-				case 1:
+			case "ft":
+				switch (ititwo) {
+				case "mm":
 					amount = (float) (amount * 304.8);// ft to mm
 					break;
-				case 2:
+				case "cm":
 					amount = (float) (amount * 30.48);// ft to cm
 					break;
-				case 3:
+				case "in":
 					amount = (float) (amount * 12);// ft to in
 					break;
-				case 5:
+				case "ft":
 					amount = (float) (amount * 0.333333);// ft to yrds
 					break;
-				case 6:
+				case "m":
 					amount = (float) (amount * 0.3048);// ft to m
 					break;
-				case 7:
+				case "km":
 					amount = (float) (amount * 0.0003048);// ft to km
 					break;
-				case 8:
+				case "mi":
 					amount = (float) (amount * 0.000189394);// ft to mi
 					break;
 				}
 				break;
-			case 5:
-				switch (distanceoptwo) {
-				case 1:
+			case "yrds":
+				switch (ititwo) {
+				case "mm":
 					amount = (float) (amount * 914.4);// yrds to mm
 					break;
-				case 2:
+				case "cm":
 					amount = (float) (amount * 91.44);// yrds to cm
 					break;
-				case 3:
+				case "in":
 					amount = (float) (amount * 36);// yrds to in
 					break;
-				case 4:
+				case "ft":
 					amount = (float) (amount * 3);// yrds to ft
 					break;
-				case 6:
+				case "m":
 					amount = (float) (amount * 0.9144);// yrds to m
 					break;
-				case 7:
+				case "km":
 					amount = (float) (amount * 0.0009144);// yrds to km
 					break;
-				case 8:
+				case "mi":
 					amount = (float) (amount * 0.000568182);// yrds to mi
 					break;
 				}
 				break;
-			case 6:
-				switch (distanceoptwo) {
-				case 1:
+			case "m":
+				switch (ititwo) {
+				case "mm":
 					amount = (float) (amount * 1000);// m to mm
 					break;
-				case 2:
+				case "cm":
 					amount = (float) (amount * 100);// m to cm
 					break;
-				case 3:
+				case "in":
 					amount = (float) (amount * 39.3701);// m to in
 					break;
-				case 4:
+				case "ft":
 					amount = (float) (amount * 3.28084);// m to ft
 					break;
-				case 5:
+				case "yrds":
 					amount = (float) (amount * 1.09361);// m to yrds
 					break;
-				case 7:
+				case "km":
 					amount = (float) (amount * 0.001);// m to km
 					break;
-				case 8:
+				case "mi":
 					amount = (float) (amount * 0.000621371);// m to mi
 					break;
 				}
 				break;
-			case 7:
-				switch (distanceoptwo) {
-				case 1:
+			case "km":
+				switch (ititwo) {
+				case "mm":
 					amount = (float) (amount * 1000000);// km to mm
 					break;
-				case 2:
+				case "cm":
 					amount = (float) (amount * 100000);// km to cm
 					break;
-				case 3:
+				case "in":
 					amount = (float) (amount * 39370.1);// km to in
 					break;
-				case 4:
+				case "ft":
 					amount = (float) (amount * 3280.84);// km to ft
 					break;
-				case 5:
+				case "yrds":
 					amount = (float) (amount * 1093.61);// km to yrds
 					break;
-				case 6:
+				case "m":
 					amount = (float) (amount * 1000);// km to m
 					break;
-				case 8:
+				case "mi":
 					amount = (float) (amount * 0.621371);// km to mi
 					break;
 				}
 				break;
-			case 8:
-				switch (distanceoptwo) {
-				case 1:
+			case "mi":
+				switch (ititwo) {
+				case "mm":
 					amount = (float) (amount * 1609344);// mi to mm
 					break;
-				case 2:
+				case "cm":
 					amount = (float) (amount * 160934);// mi to cm
 					break;
-				case 3:
+				case "in":
 					amount = (float) (amount * 63360);// mi to in
 					break;
-				case 4:
+				case "ft":
 					amount = (float) (amount * 5280);// mi to ft
 					break;
-				case 5:
+				case "yrds":
 					amount = (float) (amount * 1760);// mi to yrds
 					break;
-				case 6:
+				case "m":
 					amount = (float) (amount * 1609.34);// mi to m
 					break;
-				case 7:
+				case "km":
 					amount = (float) (amount * 1.60934);// mi to km
 					break;
 				}
@@ -357,22 +361,21 @@ public class MetricConverter {
 		else if (option == 2) {
 
 			System.out.println();
-			System.out.println("'1' : ounces");
-			System.out.println("'2' : milligrams");
-			System.out.println("'3' : grams");
-			System.out.println("'4' : kilograms");
-			System.out.println("'5' : lbs");
-			System.out.println("'6' : newtons");
-			System.out.println("'7' : (metric) tons");
+			System.out.println("'oz'  :  ounces");
+			System.out.println("'mg'  :  milligrams");
+			System.out.println("'g'   :  grams");
+			System.out.println("'kg'  :  kilograms");
+			System.out.println("'lbs' :  pounds");
+			System.out.println("'mt'  :  (metric) tons");
 			System.out.println();
 
-			System.out.println("Use the number that corresponds with each unit");
+			System.out.println("Use the abbreviation that corresponds with each unit");
 
 			System.out.println();
 
 			System.out.println("Starting unit?");
 
-			int weightop = sdcalc.nextInt();
+			String ogo = sdcalc.next(); 
 
 			System.out.println();
 
@@ -384,44 +387,39 @@ public class MetricConverter {
 
 			System.out.println("What unit are you converting to?");
 
-			int weightoptwo = sdcalc.nextInt();
+			String ogotwo = sdcalc.next();
 
 			System.out.println();
 
 			System.out.println();
 
-			switch (weightop) {
-			case 1:
+			switch (ogo) {
+			case "oz":
 				unit = "oz";
 				System.out.println("ounces");
 				break;
 
-			case 2:
+			case "mg":
 				unit = "mg";
 				System.out.println("milligrams");
 				break;
 
-			case 3:
+			case "g":
 				unit = "g";
 				System.out.println("grams");
 				break;
 
-			case 4:
+			case "kg":
 				unit = "kg";
 				System.out.println("kilograms");
 				break;
 
-			case 5:
+			case "lbs":
 				unit = "lbs";
 				System.out.println("lbs");
 				break;
 
-			case 6:
-				unit = "N";
-				System.out.println("newtons");
-				break;
-
-			case 7:
+			case "mt":
 				unit = "tons";
 				System.out.println("(metric) tons");
 				break;
@@ -431,38 +429,33 @@ public class MetricConverter {
 			System.out.println("to");
 			System.out.println();
 
-			switch (weightoptwo) {
-			case 1:
+			switch (ogotwo) {
+			case "oz":
 				unittwo = "oz";
 				System.out.println("ounces");
 				break;
 
-			case 2:
+			case "mg":
 				unittwo = "mg";
 				System.out.println("milligrams");
 				break;
 
-			case 3:
+			case "g":
 				unittwo = "g";
 				System.out.println("grams");
 				break;
 
-			case 4:
+			case "kg":
 				unittwo = "kg";
 				System.out.println("kilograms");
 				break;
 
-			case 5:
+			case "lbs":
 				unittwo = "lbs";
 				System.out.println("lbs");
 				break;
 
-			case 6:
-				unittwo = "N";
-				System.out.println("newtons");
-				break;
-
-			case 7:
+			case "mt":
 				unittwo = "tons";
 				System.out.println("(metric) tons");
 				break;
@@ -474,88 +467,143 @@ public class MetricConverter {
 
 			System.out.println(amount + " " + unit + " = ? " + unittwo);
 
-			switch (weightop) {
-			case 1:
-				switch (weightoptwo) {
-				case 2:
+			switch (ogo) {
+			case "oz":
+				switch (ogotwo) {
+				case "mg":
 					amount = (float) amount * 28349.5f;
 					break;
 
-				case 3:
+				case "g":
 					amount = (float) amount * 28.3495f;
 					break;
 
-				case 4:
+				case "kg":
 					amount = (float) amount * 0.0283495f;
 					break;
 
-				case 5:
+				case "lbs":
 					amount = (float) amount * 0.0625f;
 					break;
 
-				case 6:
-					amount = (float) amount * 0.28f;
-					break;
-
-				case 7:
+				case "mt":
 					amount = (float) amount * 0.00002834952f;
 				}
 				break;
-			case 2:
-				switch (weightoptwo) {
-				case 1:
+			case "mg":
+				switch (ogotwo) {
+				case "oz":
 					amount = (float) amount * 0.00003527396f;
 					break;
 
-				case 3:
+				case "g":
 					amount = (float) amount * 0.001f;
 					break;
 
-				case 4:
+				case "kg":
 					amount = (float) amount * 0.000001000000f;
 					break;
 
-				case 5:
+				case "lbs":
 					amount = (float) amount * 0.0000022f;
 					break;
 
-				case 6:
-					amount = (float) amount * 0.0000098f;
-					break;
-
-				case 7:
+				case "mt":
 					amount = (float) amount * 0.000000001f;
 					break;
 				}
 				break;
-			case 3:
-				switch (weightoptwo) {
-				case 1:
+			case "g":
+				switch (ogotwo) {
+				case "oz":
 					amount = (float) amount * 0.035274f;
 					break;
 
-				case 2:
+				case "mg":
 					amount = (float) amount * 1000f;
 					break;
 
-				case 4:
+				case "kg":
 					amount = (float) amount * 0.001f;
 					break;
 
-				case 5:
+				case "lbs":
 					amount = (float) amount * 0.00220462f;
 					break;
 
-				case 6:
-					amount = (float) amount * 0.00980665f;
-					break;
-
-				case 7:
+				case "mt":
 					amount = (float) amount * 0.000001f;
 					break;
 				}
 				break;
-
+			case "kg":
+				switch (ogotwo) {
+				case "oz":
+					amount = (float) amount * 35.274f;
+					break;
+					
+				case "mg":
+					amount = (float) amount * 1000000f;
+					break;
+					
+				case "g":
+					amount = (float) amount * 1000f;
+					break;
+					
+				case "lbs":
+					amount = (float) amount * 2.20462f;
+					break;
+					
+				case "mt": 
+					amount = (float) amount * 0.001f;
+				}
+				break;
+			case "lbs":
+				switch (ogotwo) {
+				case "oz":
+					amount = (float) amount * 16f;
+					break;
+				
+				case "mg":
+					amount = (float) amount * 453592f;
+					break;
+				
+				case "g":
+					amount = (float) amount * 453.592f;
+					break;
+					
+				case "kg":
+					amount = (float) amount * 0.453592f;
+					break;
+					
+				case "mt":
+					amount = (float) amount * 0.000453592f;
+					break;
+				}
+				break;
+			case "mt":
+				switch (ogotwo) {
+				case "oz":
+					amount = (float) amount * 35274f;
+					break;
+					
+				case "mg":
+					amount = (float) amount * 1000000000f;
+					break;
+					
+				case "g":
+					amount = (float) amount * 1000000f;
+					break;
+					
+				case "kg":
+					amount = (float) amount * 1000f;
+					break;
+					
+				case "lbs":
+					amount = (float) amount * 2204.62f;
+					break;
+				}
+		
 			}
 
 			System.out.println();
