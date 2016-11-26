@@ -17,7 +17,7 @@ public class BasicCalculator {
 			System.out.println("\n"+engine.eval(input));				//Evaluate expression with javascript
 		} catch (ScriptException e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
+			e.printStackTrace();	
 		}
 	}
 

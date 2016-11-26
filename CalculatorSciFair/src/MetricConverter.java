@@ -501,7 +501,6 @@ public class MetricConverter {
 					amount = (float) amount * 0.00002834952f;
 				}
 				break;
-
 			case 2:
 				switch (weightoptwo) {
 				case 1:
@@ -528,7 +527,42 @@ public class MetricConverter {
 					amount = (float) amount * 0.000000001f;
 					break;
 				}
+				break;
+			case 3:
+				switch (weightoptwo) {
+				case 1:
+					amount = (float) amount * 0.035274f;
+					break;
+
+				case 2:
+					amount = (float) amount * 1000f;
+					break;
+
+				case 4:
+					amount = (float) amount * 0.001f;
+					break;
+
+				case 5:
+					amount = (float) amount * 0.00220462f;
+					break;
+
+				case 6:
+					amount = (float) amount * 0.00980665f;
+					break;
+
+				case 7:
+					amount = (float) amount * 0.000001f;
+					break;
+				}
+				break;
+
 			}
+
+			System.out.println();
+			System.out.println();
+			System.out.println();
+			
+			System.out.println(amount + " " + unittwo);
 
 		}
 

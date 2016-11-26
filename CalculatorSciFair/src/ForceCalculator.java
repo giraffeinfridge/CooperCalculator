@@ -3,7 +3,6 @@ public class ForceCalculator {
 
 	public static void main(String[] args) {
 		Scanner forcecalc = new Scanner (System.in);
-		
 		int altsol = 0;
 		
 		System.out.println("Mass: ");

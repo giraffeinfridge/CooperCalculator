@@ -16,7 +16,7 @@ public class ConstantSpeedCalculator {
 		
 		System.out.println();
 		
-		System.out.println(answer + "m");
+		System.out.println(answer + " m");
 		
 		try {
 			Thread.sleep(1000);

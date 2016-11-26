@@ -1,4 +1,4 @@
-
+import java.util.Scanner;
 public class returnvalues {
 
 	public static void main(String[] args) {
@@ -6,7 +6,9 @@ public class returnvalues {
 	}
 	
 	public static int age(){
-		return 16;
+		Scanner abc = new Scanner (System.in);
+		int age = abc.nextInt();
+		return age;
 	}
 
 }
