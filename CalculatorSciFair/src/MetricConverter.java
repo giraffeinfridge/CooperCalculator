@@ -2,6 +2,10 @@ import java.util.Scanner;
 
 public class MetricConverter {
 
+///	public static String iti = null;
+	
+///	public String ititwo = null;
+	
 	public static void main(String[] args) {
 
 		Scanner sdcalc = new Scanner(System.in);
@@ -9,6 +13,10 @@ public class MetricConverter {
 		String unit = null;
 
 		String unittwo = null;
+		
+		String[] checker = {"mg", "cm", "in", "ft", "yrds", "m", "km", "mi"};
+		
+		boolean checkertwo = true;
 
 		float ytom = (float) 0.9144;
 
@@ -42,9 +50,39 @@ public class MetricConverter {
 			System.out.println("Starting unit?");
 
 			String iti = sdcalc.next();
-			
-			//int distanceop = sdcalc.nextInt();
 
+			if (iti!=checker[1] || iti!=checker[2] || iti!=checker[3] || iti!=checker[4]
+			|| iti!=checker[5] || iti!=checker[6] || iti!=checker[7] || iti!=checker[8]); {
+				
+				while (iti!=checker[1] || iti!=checker[2] || iti!=checker[3] || iti!=checker[4]
+				|| iti!=checker[5] || iti!=checker[6] || iti!=checker[7] || iti!=checker[8]); {
+				
+				System.out.println();
+				System.out.println("This unit is invalid");
+				
+				try { Thread.sleep(1000);
+				} catch (InterruptedException mate) {System.out.println(mate);}
+				
+				System.out.println();
+				
+				System.out.println("Please enter a valid unit name");
+				
+				try { Thread.sleep(1000);
+				} catch (InterruptedException mate) {System.out.println(mate);}
+				
+				System.out.println();
+				
+				System.out.println();
+				
+				System.out.println();
+				
+				System.out.println("Starting unit?");
+				
+				iti = sdcalc.next();
+			}
+				
+			}
+			
 			System.out.println();
 
 			System.out.println("Amount of first unit?");
@@ -57,10 +95,14 @@ public class MetricConverter {
 
 			String ititwo = sdcalc.next();
 			
-			//int distanceoptwo = sdcalc.nextInt();
+			if (ititwo!=checker[1] || ititwo!=checker[2] || ititwo!=checker[3] || ititwo!=checker[4]
+					|| ititwo!=checker[5] || ititwo!=checker[6] || ititwo!=checker[7] || ititwo!=checker[8]); {
+						System.out.println();
+						System.out.println("This unit is invalid");
+					}
 
 			System.out.println();
-
+				
 			switch (iti) {
 			case "mm":
 				System.out.print("\nmillimeters");
@@ -617,3 +659,6 @@ public class MetricConverter {
 	}
 
 }
+
+
+/// TODO: cancel negative numbers, let user re-enter unit if it is invalid
