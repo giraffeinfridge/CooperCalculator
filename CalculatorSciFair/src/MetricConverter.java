@@ -5,7 +5,7 @@ public class MetricConverter {
 	///this program is fucking me in the asshole
 	
 	/// public static String iti = null;
-
+//
 	/// public String ititwo = null;
 	
 	public static String[] checker = { "mg", "cm", "in", "ft", "yrds", "m", "km", "mi" };
