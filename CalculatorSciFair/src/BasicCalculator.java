@@ -5,7 +5,7 @@ import javax.script.ScriptEngineManager;
 import javax.script.ScriptException;
 
 public class BasicCalculator {
-//
+
 	public static void init() {
 		Scanner bc = new Scanner(System.in);
 		boolean on = true;
