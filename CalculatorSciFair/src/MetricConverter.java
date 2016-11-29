@@ -1,4 +1,6 @@
 
+import java.lang.reflect.Array;
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class MetricConverter {
@@ -9,7 +11,7 @@ public class MetricConverter {
 //
 	/// public String ititwo = null;
 	
-	public static String[] checker = { "mg", "cm", "in", "ft", "yrds", "m", "km", "mi" };
+	public static String[] checker = { "mm", "cm", "in", "ft", "yrds", "m", "km", "mi" };
 
 	public static void main(String[] args) {
 
@@ -21,7 +23,6 @@ public class MetricConverter {
 
 		String unittwo = null;
 
-		boolean checkertwo = false;
 
 		float ytom = (float) 0.9144;
 
@@ -49,12 +50,13 @@ public class MetricConverter {
 			System.out.println();
 
 			System.out.println("Use the abbreviation that corresponds with each unit");
+			
+			System.out.println("Starting unit?");
 
-			while (!checkertwo) {
+			iti = sdcalc.next();
+
+			while (!checkertwo(iti)) {
 				
-				if (checkertwo) {
-					break;
-				}
 
 				System.out.println();
 
@@ -673,13 +675,16 @@ public class MetricConverter {
 	}
 
 	public static boolean checkertwo(String iti) {
-		if (iti != checker[1] || iti != checker[2] || iti != checker[3] || iti != checker[4] || iti != checker[5]
-				|| iti != checker[6] || iti != checker[7] || iti != checker[8]) {
+		
+		if(Arrays.asList(checker).contains(iti)){
+			return true;
+		}else{
 			return false;
 		}
-		else return true;
 	}
 }
 
-/// TODO: cancel negative numbers, let user re-enter unit if it is invalid
+/* TODO: cancel negative numbers, let user re-enter unit if it is invalid
+ * 		 Divide code into methods so it is smaller and easier to follow
+ */
 /// (finish/fix)
