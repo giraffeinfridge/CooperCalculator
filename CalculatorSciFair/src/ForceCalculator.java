@@ -4,6 +4,7 @@ public class ForceCalculator {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 	public static void main(String[] args) {
 		Scanner forcecalc = new Scanner (System.in);
 		int altsol = 0;
@@ -55,6 +56,24 @@ public class ForceCalculator {
 					System.out.println("Re-enter Mass: ");
 				}
 >>>>>>> branch 'master' of https://github.com/giraffeinfridge/CooperCalculator.git
+=======
+	public static void init() {
+		Scanner forcecalc = new Scanner(System.in);
+		boolean on = true;
+		while (on) {
+			int altsol = 0;
+
+			System.out.println("Mass: ");
+
+			float mass = -1;
+			while (mass < 0) {
+				mass = forcecalc.nextFloat();
+				if (mass < 0) {
+					System.out.println("Impossible value, nice try.");
+					System.out.println();
+					System.out.println("Re-enter Mass: ");
+				}
+>>>>>>> refs/remotes/origin/master
 			}
 
 			System.out.println("Acceleration: ");
