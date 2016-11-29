@@ -2,21 +2,25 @@ import java.util.Scanner;
 
 public class MetricConverter {
 
-///	public static String iti = null;
+	///this program is fucking me in the asshole
 	
-///	public String ititwo = null;
+	/// public static String iti = null;
+
+	/// public String ititwo = null;
 	
+	public static String[] checker = { "mg", "cm", "in", "ft", "yrds", "m", "km", "mi" };
+
 	public static void main(String[] args) {
 
 		Scanner sdcalc = new Scanner(System.in);
 
+		String iti = null;
+
 		String unit = null;
 
 		String unittwo = null;
-		
-		String[] checker = {"mg", "cm", "in", "ft", "yrds", "m", "km", "mi"};
-		
-		boolean checkertwo = true;
+
+		boolean checkertwo = false;
 
 		float ytom = (float) 0.9144;
 
@@ -45,44 +49,51 @@ public class MetricConverter {
 
 			System.out.println("Use the abbreviation that corresponds with each unit");
 
-			System.out.println();
+			while (!checkertwo) {
+				
+				if (checkertwo) {
+					break;
+				}
 
-			System.out.println("Starting unit?");
+				System.out.println();
 
-			String iti = sdcalc.next();
-
-			if (iti!=checker[1] || iti!=checker[2] || iti!=checker[3] || iti!=checker[4]
-			|| iti!=checker[5] || iti!=checker[6] || iti!=checker[7] || iti!=checker[8]); {
-				
-				while (iti!=checker[1] || iti!=checker[2] || iti!=checker[3] || iti!=checker[4]
-				|| iti!=checker[5] || iti!=checker[6] || iti!=checker[7] || iti!=checker[8]); {
-				
-				System.out.println();
-				System.out.println("This unit is invalid");
-				
-				try { Thread.sleep(1000);
-				} catch (InterruptedException mate) {System.out.println(mate);}
-				
-				System.out.println();
-				
-				System.out.println("Please enter a valid unit name");
-				
-				try { Thread.sleep(1000);
-				} catch (InterruptedException mate) {System.out.println(mate);}
-				
-				System.out.println();
-				
-				System.out.println();
-				
-				System.out.println();
-				
 				System.out.println("Starting unit?");
-				
+
 				iti = sdcalc.next();
 			}
-				
-			}
-			
+
+			/*
+			 * if (iti!=checker[1] || iti!=checker[2] || iti!=checker[3] ||
+			 * iti!=checker[4] || iti!=checker[5] || iti!=checker[6] ||
+			 * iti!=checker[7] || iti!=checker[8]); {
+			 * 
+			 * while (iti!=checker[1] || iti!=checker[2] || iti!=checker[3] ||
+			 * iti!=checker[4] || iti!=checker[5] || iti!=checker[6] ||
+			 * iti!=checker[7] || iti!=checker[8]); {
+			 * 
+			 * System.out.println(); System.out.println("This unit is invalid");
+			 * 
+			 * try { Thread.sleep(1000); } catch (InterruptedException mate)
+			 * {System.out.println(mate);}
+			 * 
+			 * System.out.println();
+			 * 
+			 * System.out.println("Please enter a valid unit name");
+			 * 
+			 * try { Thread.sleep(1000); } catch (InterruptedException mate)
+			 * {System.out.println(mate);}
+			 * 
+			 * System.out.println();
+			 * 
+			 * System.out.println();
+			 * 
+			 * System.out.println();
+			 * 
+			 * System.out.println("Starting unit?");
+			 * 
+			 * iti = sdcalc.next(); }
+			 */
+
 			System.out.println();
 
 			System.out.println("Amount of first unit?");
@@ -94,15 +105,17 @@ public class MetricConverter {
 			System.out.println("What unit are you converting to?");
 
 			String ititwo = sdcalc.next();
-			
-			if (ititwo!=checker[1] || ititwo!=checker[2] || ititwo!=checker[3] || ititwo!=checker[4]
-					|| ititwo!=checker[5] || ititwo!=checker[6] || ititwo!=checker[7] || ititwo!=checker[8]); {
-						System.out.println();
-						System.out.println("This unit is invalid");
-					}
+
+			if (ititwo != checker[1] || ititwo != checker[2] || ititwo != checker[3] || ititwo != checker[4]
+					|| ititwo != checker[5] || ititwo != checker[6] || ititwo != checker[7] || ititwo != checker[8])
+				;
+			{
+				System.out.println();
+				System.out.println("This unit is invalid");
+			}
 
 			System.out.println();
-				
+
 			switch (iti) {
 			case "mm":
 				System.out.print("\nmillimeters");
@@ -417,7 +430,7 @@ public class MetricConverter {
 
 			System.out.println("Starting unit?");
 
-			String ogo = sdcalc.next(); 
+			String ogo = sdcalc.next();
 
 			System.out.println();
 
@@ -583,20 +596,20 @@ public class MetricConverter {
 				case "oz":
 					amount = (float) amount * 35.274f;
 					break;
-					
+
 				case "mg":
 					amount = (float) amount * 1000000f;
 					break;
-					
+
 				case "g":
 					amount = (float) amount * 1000f;
 					break;
-					
+
 				case "lbs":
 					amount = (float) amount * 2.20462f;
 					break;
-					
-				case "mt": 
+
+				case "mt":
 					amount = (float) amount * 0.001f;
 				}
 				break;
@@ -605,19 +618,19 @@ public class MetricConverter {
 				case "oz":
 					amount = (float) amount * 16f;
 					break;
-				
+
 				case "mg":
 					amount = (float) amount * 453592f;
 					break;
-				
+
 				case "g":
 					amount = (float) amount * 453.592f;
 					break;
-					
+
 				case "kg":
 					amount = (float) amount * 0.453592f;
 					break;
-					
+
 				case "mt":
 					amount = (float) amount * 0.000453592f;
 					break;
@@ -628,37 +641,44 @@ public class MetricConverter {
 				case "oz":
 					amount = (float) amount * 35274f;
 					break;
-					
+
 				case "mg":
 					amount = (float) amount * 1000000000f;
 					break;
-					
+
 				case "g":
 					amount = (float) amount * 1000000f;
 					break;
-					
+
 				case "kg":
 					amount = (float) amount * 1000f;
 					break;
-					
+
 				case "lbs":
 					amount = (float) amount * 2204.62f;
 					break;
 				}
-		
+
 			}
 
 			System.out.println();
 			System.out.println();
 			System.out.println();
-			
+
 			System.out.println(amount + " " + unittwo);
 
 		}
 
 	}
 
+	public static boolean checkertwo(String iti) {
+		if (iti != checker[1] || iti != checker[2] || iti != checker[3] || iti != checker[4] || iti != checker[5]
+				|| iti != checker[6] || iti != checker[7] || iti != checker[8]) {
+			return false;
+		}
+		else return true;
+	}
 }
 
-
 /// TODO: cancel negative numbers, let user re-enter unit if it is invalid
+/// (finish/fix)
