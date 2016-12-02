@@ -1,15 +1,7 @@
-
-import java.lang.reflect.Array;
 import java.util.Arrays;
 import java.util.Scanner;
 
 public class MetricConverter {
-
-	///this program is fucking me in the asshole
-	
-	/// public static String iti = null;
-//
-	/// public String ititwo = null;
 	
 	public static String[] checker = { "mm", "cm", "in", "ft", "yrds", "m", "km", "mi" };
 
@@ -78,38 +70,6 @@ public class MetricConverter {
 				iti = sdcalc.next();
 			}
 
-			/*
-			 * if (iti!=checker[1] || iti!=checker[2] || iti!=checker[3] ||
-			 * iti!=checker[4] || iti!=checker[5] || iti!=checker[6] ||
-			 * iti!=checker[7] || iti!=checker[8]); {
-			 * 
-			 * while (iti!=checker[1] || iti!=checker[2] || iti!=checker[3] ||
-			 * iti!=checker[4] || iti!=checker[5] || iti!=checker[6] ||
-			 * iti!=checker[7] || iti!=checker[8]); {
-			 * 
-			 * System.out.println(); System.out.println("This unit is invalid");
-			 * 
-			 * try { Thread.sleep(1000); } catch (InterruptedException mate)
-			 * {System.out.println(mate);}
-			 * 
-			 * System.out.println();
-			 * 
-			 * System.out.println("Please enter a valid unit name");
-			 * 
-			 * try { Thread.sleep(1000); } catch (InterruptedException mate)
-			 * {System.out.println(mate);}
-			 * 
-			 * System.out.println();
-			 * 
-			 * System.out.println();
-			 * 
-			 * System.out.println();
-			 * 
-			 * System.out.println("Starting unit?");
-			 * 
-			 * iti = sdcalc.next(); }
-			 */
-
 			System.out.println();
 
 			System.out.println("Amount of first unit?");
@@ -121,14 +81,6 @@ public class MetricConverter {
 			System.out.println("What unit are you converting to?");
 
 			String ititwo = sdcalc.next();
-
-		///	if (ititwo != checker[1] || ititwo != checker[2] || ititwo != checker[3] || ititwo != checker[4]
-				///	|| ititwo != checker[5] || ititwo != checker[6] || ititwo != checker[7] || ititwo != checker[8])
-				///;
-			///{
-			///	System.out.println();
-				
-			///}
 
 			System.out.println();
 
