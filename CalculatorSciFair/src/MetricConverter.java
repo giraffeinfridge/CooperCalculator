@@ -51,13 +51,26 @@ public class MetricConverter {
 
 			System.out.println("Use the abbreviation that corresponds with each unit");
 			
+			System.out.println();
+			
 			System.out.println("Starting unit?");
 
 			iti = sdcalc.next();
 
 			while (!checkertwo(iti)) {
 				
-
+				System.out.println();
+				
+				System.out.println("This unit is invalid");
+				
+				try {Thread.sleep(1000);
+				} catch (InterruptedException mate) {System.out.println(mate);}
+				
+				System.out.println("Enter a valid unit");
+				
+				try {Thread.sleep(500);
+				} catch (InterruptedException mate) {System.out.println(mate);}
+				
 				System.out.println();
 
 				System.out.println("Starting unit?");
@@ -109,13 +122,13 @@ public class MetricConverter {
 
 			String ititwo = sdcalc.next();
 
-			if (ititwo != checker[1] || ititwo != checker[2] || ititwo != checker[3] || ititwo != checker[4]
-					|| ititwo != checker[5] || ititwo != checker[6] || ititwo != checker[7] || ititwo != checker[8])
-				;
-			{
-				System.out.println();
-				System.out.println("This unit is invalid");
-			}
+		///	if (ititwo != checker[1] || ititwo != checker[2] || ititwo != checker[3] || ititwo != checker[4]
+				///	|| ititwo != checker[5] || ititwo != checker[6] || ititwo != checker[7] || ititwo != checker[8])
+				///;
+			///{
+			///	System.out.println();
+				
+			///}
 
 			System.out.println();
 
