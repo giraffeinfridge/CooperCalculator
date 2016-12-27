@@ -2,10 +2,10 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 public class MetricConverter {
-	
-	//jd
-	
-	public static String[] checker = { "mm", "cm", "in", "ft", "yrds", "m", "km", "mi" };
+
+	public static String[] checkerdistance = { "mm", "cm", "in", "ft", "yrds", "m", "km", "mi" };
+
+	public static String[] checkerweight = { "oz", "mg", "g", "kg", "lbs", "mt" };
 
 	public static void main(String[] args) {
 
@@ -16,7 +16,6 @@ public class MetricConverter {
 		String unit = null;
 
 		String unittwo = null;
-
 
 		float ytom = (float) 0.9144;
 
@@ -43,28 +42,32 @@ public class MetricConverter {
 			System.out.println("'mi'  : miles");
 			System.out.println();
 
-			System.out.println("Use the abbreviation that corresponds with each unit");
-			
-			System.out.println();
-			
+			System.out.println("Use the abbreviation that corresponds with each unit \n");
+
 			System.out.println("Starting unit?");
 
 			iti = sdcalc.next();
 
-			while (!checkertwo(iti)) {
-				
+			while (!checkertwodistance(iti)) {
+
 				System.out.println();
-				
+
 				System.out.println("This unit is invalid");
-				
-				try {Thread.sleep(1000);
-				} catch (InterruptedException mate) {System.out.println(mate);}
-				
+
+				try {
+					Thread.sleep(1000);
+				} catch (InterruptedException mate) {
+					System.out.println(mate);
+				}
+
 				System.out.println("Enter a valid unit");
-				
-				try {Thread.sleep(500);
-				} catch (InterruptedException mate) {System.out.println(mate);}
-				
+
+				try {
+					Thread.sleep(500);
+				} catch (InterruptedException mate) {
+					System.out.println(mate);
+				}
+
 				System.out.println();
 
 				System.out.println("Starting unit?");
@@ -83,40 +86,67 @@ public class MetricConverter {
 			System.out.println("What unit are you converting to?");
 
 			String ititwo = sdcalc.next();
+			
+			while (!checkerodistance(ititwo)) {
 
-			System.out.println();
+				System.out.println();
 
+				System.out.println("This unit is invalid");
+
+				try {
+					Thread.sleep(1000);
+				} catch (InterruptedException mate) {
+					System.out.println(mate);
+				}
+
+				System.out.println("Enter a valid unit");
+
+				try {
+					Thread.sleep(500);
+				} catch (InterruptedException mate) {
+					System.out.println(mate);
+				}
+			
+				System.out.println();
+
+				System.out.println("What unit are you converting to?");
+
+				ititwo = sdcalc.next();
+			}
+
+			System.out.println("\n");
+			
 			switch (iti) {
 			case "mm":
-				System.out.print("\nmillimeters");
+				System.out.print("millimeters");
 				unit = "mm";
 				break;
 			case "cm":
-				System.out.print("\ncentimeters");
+				System.out.print("centimeters");
 				unit = "cm";
 				break;
 			case "in":
-				System.out.print("\ninches");
+				System.out.print("inches");
 				unit = "in";
 				break;
 			case "ft":
-				System.out.print("\nfeet");
+				System.out.print("feet");
 				unit = "ft";
 				break;
 			case "yrds":
-				System.out.print("\nyards");
+				System.out.print("yards");
 				unit = "yrds";
 				break;
 			case "m":
-				System.out.print("\nmeters");
+				System.out.print("meters");
 				unit = "m";
 				break;
 			case "km":
-				System.out.print("\nkilometers");
+				System.out.print("kilometers");
 				unit = "km";
 				break;
 			case "mi":
-				System.out.print("\nmiles");
+				System.out.print("miles");
 				unit = "mi";
 				break;
 			}
@@ -383,6 +413,8 @@ public class MetricConverter {
 
 		}
 
+		// weight|mass
+
 		else if (option == 2) {
 
 			System.out.println();
@@ -402,6 +434,33 @@ public class MetricConverter {
 
 			String ogo = sdcalc.next();
 
+			while (!checkertwoweight(ogo)) {
+
+				System.out.println();
+
+				System.out.println("This unit is invalid");
+
+				try {
+					Thread.sleep(1000);
+				} catch (InterruptedException mate) {
+					System.out.println(mate);
+				}
+
+				System.out.println("Enter a valid unit");
+
+				try {
+					Thread.sleep(500);
+				} catch (InterruptedException mate) {
+					System.out.println(mate);
+				}
+
+				System.out.println();
+
+				System.out.println("Starting unit?");
+
+				ogo = sdcalc.next();
+			}
+
 			System.out.println();
 
 			System.out.println("Amount of first unit?");
@@ -414,45 +473,69 @@ public class MetricConverter {
 
 			String ogotwo = sdcalc.next();
 
-			System.out.println();
+			while (!checkeroweight(ogotwo)) {
+
+				System.out.println();
+
+				System.out.println("This unit is invalid");
+
+				try {
+					Thread.sleep(1000);
+				} catch (InterruptedException mate) {
+					System.out.println(mate);
+				}
+
+				System.out.println("Enter a valid unit");
+
+				try {
+					Thread.sleep(500);
+				} catch (InterruptedException mate) {
+					System.out.println(mate);
+				}
+
+				System.out.println();
+
+				System.out.println("What unit are you converting to?");
+
+				ogotwo = sdcalc.next();
+			}
 
 			System.out.println();
-
+			
 			switch (ogo) {
 			case "oz":
 				unit = "oz";
-				System.out.println("ounces");
+				System.out.print("ounces");
 				break;
 
 			case "mg":
 				unit = "mg";
-				System.out.println("milligrams");
+				System.out.print("milligrams");
 				break;
 
 			case "g":
 				unit = "g";
-				System.out.println("grams");
+				System.out.print("grams");
 				break;
 
 			case "kg":
 				unit = "kg";
-				System.out.println("kilograms");
+				System.out.print("kilograms");
 				break;
 
 			case "lbs":
 				unit = "lbs";
-				System.out.println("lbs");
+				System.out.print("lbs");
 				break;
 
 			case "mt":
 				unit = "tons";
-				System.out.println("(metric) tons");
+				System.out.print("(metric) tons");
 				break;
+				
 			}
 
-			System.out.println();
-			System.out.println("to");
-			System.out.println();
+			System.out.print(" -> ");
 
 			switch (ogotwo) {
 			case "oz":
@@ -641,17 +724,47 @@ public class MetricConverter {
 
 	}
 
-	public static boolean checkertwo(String iti) {
-		
-		if(Arrays.asList(checker).contains(iti)){
+	public static boolean checkertwodistance(String iti) {
+
+		if (Arrays.asList(checkerdistance).contains(iti)) {
 			return true;
-		}else{
+		} else {
+			return false;
+		}
+
+	}
+
+	public static boolean checkerodistance(String ititwo) {
+
+		if (Arrays.asList(checkerdistance).contains(ititwo)) {
+			return true;
+		} else {
+			return false;
+		}
+
+	}
+
+	public static boolean checkertwoweight(String ogo) {
+
+		if (Arrays.asList(checkerweight).contains(ogo)) {
+			return true;
+		} else {
+			return false;
+		}
+
+	}
+
+	public static boolean checkeroweight(String ogotwo) {
+		if (Arrays.asList(checkerweight).contains(ogotwo)) {
+			return true;
+		} else {
 			return false;
 		}
 	}
 }
 
-/* TODO: cancel negative numbers, let user re-enter unit if it is invalid
- * 		 Divide code into methods so it is smaller and easier to follow
+/*
+ * TODO: cancel negative numbers, let user re-enter unit if it is invalid Divide
+ * code into methods so it is smaller and easier to follow
  */
 /// (finish/fix)
