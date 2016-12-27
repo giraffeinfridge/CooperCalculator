@@ -6,6 +6,8 @@ public class MetricConverter {
 	public static String[] checkerdistance = { "mm", "cm", "in", "ft", "yrds", "m", "km", "mi" };
 
 	public static String[] checkerweight = { "oz", "mg", "g", "kg", "lbs", "mt" };
+	
+	public static String[] checkertime = { "ns", "mcs", "ms", "sec", "min", "hr", "day", "wk", "mth", "yr", "dd", "ct", "ml" };
 
 	public static void main(String[] args) {
 
@@ -714,15 +716,448 @@ public class MetricConverter {
 
 			}
 
-			System.out.println();
-			System.out.println();
+		}
+		
+		if (option == 3){
+		System.out.println();
+		System.out.println("'ns'  : nanoseconds");
+		System.out.println("'mcs' : microseconds");
+		System.out.println("'ms'  : milliseconds");
+		System.out.println("'sec' : seconds");
+		System.out.println("'min' : minutes");
+		System.out.println("'hr'  : hours");
+		System.out.println("'day' : days");
+		System.out.println("'wk'  : weeks");
+		System.out.println("'mth' : months");
+		System.out.println("'yr'  : years");
+		System.out.println("'dd'  : decades");
+		System.out.println("'ct'  : centuries");
+		System.out.println("'ml'  : millenniums");
+		System.out.println();
+		
+		System.out.println("Use the abbreviation that corresponds with each unit \n");
+
+		System.out.println("Starting unit?");
+
+		String timevar = sdcalc.next();
+
+		while (!checkertwotime(timevar)) {
+
 			System.out.println();
 
-			System.out.println(amount + " " + unittwo);
+			System.out.println("This unit is invalid");
 
+			try {
+				Thread.sleep(1000);
+			} catch (InterruptedException mate) {
+				System.out.println(mate);
+			}
+
+			System.out.println("Enter a valid unit");
+
+			try {
+				Thread.sleep(500);
+			} catch (InterruptedException mate) {
+				System.out.println(mate);
+			}
+
+			System.out.println();
+
+			System.out.println("Starting unit?");
+
+			timevar = sdcalc.next();
 		}
 
+		System.out.println();
+
+		System.out.println("Amount of first unit?");
+
+		float amount = sdcalc.nextFloat();
+
+		System.out.println();
+
+		System.out.println("What unit are you converting to?");
+
+		String timevartwo = sdcalc.next();
+		
+		while (!checkerotime(timevartwo)) {
+
+			System.out.println();
+
+			System.out.println("This unit is invalid");
+
+			try {
+				Thread.sleep(1000);
+			} catch (InterruptedException mate) {
+				System.out.println(mate);
+			}
+
+			System.out.println("Enter a valid unit");
+
+			try {
+				Thread.sleep(500);
+			} catch (InterruptedException mate) {
+				System.out.println(mate);
+			}
+		
+			System.out.println();
+
+			System.out.println("What unit are you converting to?");
+
+			timevartwo = sdcalc.next();
+		}
+
+		System.out.println("\n");
+
+		switch (timevar) {
+			case "ns":
+				switch (timevartwo) {
+				case "mcs":
+					amount = amount * 0.001f;
+					break;
+				case "ms":
+					amount = amount * 0.000001f;
+					break;
+				case "sec":
+					amount = amount * 0.0000000001f;
+					break;
+				case "min":
+					amount = amount * 0.0000000000166667f;
+					break;
+				case "hr":
+					amount = amount * 0.000000000000277778f;
+					break;
+				case "day":
+					amount = amount * 0.0000000000000115741f;
+					break;
+				case "wk":
+					amount = amount * 0.00000000000000165344f;
+					break;
+				case "mth":
+					amount = amount * 0.000000000000000380517f;
+					break;
+				case "yr":
+					amount = amount * 0.0000000000000000317098f;
+					break;
+				case "dd":
+					amount = amount * 0.00000000000000000317098f;
+					break;
+				case "ct":
+					amount = amount * 0.000000000000000000317098f;
+					break;
+				case "ml":
+					amount = amount * 0.0000000000000000000317098f;
+					break;
+				}
+				
+				break;
+			
+			case "mcs":
+				switch (timevartwo) {
+				case "ns":
+					amount = amount * 1000f;
+					break;
+				case "ms":
+					amount = amount * 0.001f;
+					break;
+				case "sec":
+					amount = amount * 0.000001f;
+					break;
+				case "min":
+					amount = amount * 0.0000000166667f;
+					break;
+				case "hr":
+					amount = amount * 2.77778e-10f;
+					break;
+				case "day":
+					amount = amount * 1.1574e-11f;
+					break;
+				case "wk":
+					amount = amount * 1.65344e-12f;
+					break;
+				case "mth":
+					amount = amount * 3.80517e-13f;
+					break;
+				case "yr":
+					amount = amount * 3.17098e-14f;
+					break;
+				case "dd":
+					amount = amount * 3.17098e-15f;
+					break;
+				case "ct":
+					amount = amount * 3.17098e-16f;
+					break;
+				case "ml":
+					amount = amount * 3.17098e-17f;
+				
+				}
+				
+				break;
+				
+			case "ms":
+				switch (timevartwo) {
+					case "ns":
+						amount = amount * 1000000f;
+						break;
+					case "mcs":
+						amount = amount * 1000f;
+						break;
+					case "sec":
+						amount = amount * 0.001f;
+						break;
+					case "min":
+						amount = amount * 1.6667e-5f;
+						break;
+					case "hr":
+						amount = amount * 2.77778e-7f;
+						break;
+					case "day":
+						amount = amount * 1.15741e-8f;
+						break;
+					case "wk":
+						amount = amount * 1.65344e-9f;
+						break;
+					case "mth":
+						amount = amount * 3.80517e-10f;
+						break;
+					case "yr":
+						amount = amount * 3.17098e-11f;
+						break;
+					case "dd":
+						amount = amount * 3.17098e-12f;
+						break;
+					case "ct":
+						amount = amount * 3.17098e-13f;
+						break;
+					case "ml":
+						amount = amount * 3.17098e-14f;
+						break;
+				}
+				
+				break;
+			
+			case "sec":
+				switch(timevartwo) {
+				case "ns":
+					amount = amount * 1e+9f;
+					break;
+				case "mcs":
+					amount = amount * 1000000f;
+					break;
+				case "ms":
+					amount = amount * 1000f;
+					break;
+				case "min":
+					amount = amount * 0.0166667f;
+					break;
+				case "hr":
+					amount = amount * 0.000277778f;
+					break;
+				case "day":
+					amount = amount * 1.15741e-5f;
+					break;
+				case "wk":
+					amount = amount * 1.65344e-6f;
+					break;
+				case "mth":
+					amount = amount * 3.80517e-7f;
+					break;
+				case "yr":
+					amount = amount * 3.17098e-8f;
+					break;
+				case "dd":
+					amount = amount * 3.17098e-9f;
+					break;
+				case "ct":
+					amount = amount * 3.17098e-10f;
+					break;
+				case "ml":
+					amount = amount * 3.17098e-11f;
+					break;
+				
+				}
+				
+				break;
+			
+			case "min":
+				switch(timevartwo) {
+				case "ns":
+					amount = amount * 6e+10f;
+					break;
+				case "mcs":
+					amount = amount * 6e+7f;
+					break;
+				case "ms":
+					amount = amount * 60000f;
+					break;
+				case "sec":
+					amount = amount * 60f;
+					break;
+				case "hr":
+					amount = amount * 0.0166667f;
+					break;
+				case "day":
+					amount = amount * 0.000694444f;
+					break;
+				case "wk":
+					amount = amount * 9.92063e-5f;
+					break;
+				case "mth":
+					amount = amount * 2.2831e-5f;
+					break;
+				case "yr":
+					amount = amount * 1.90259e-6f;
+					break;
+				case "dd":
+					amount = amount * 1.90259e-7f;
+					break;
+				case "ct":
+					amount = amount * 1.90259e-8f;
+					break;
+				case "ml":
+					amount = amount * 1.90259e-9f;
+				
+				}
+				
+				break;
+				
+			case "hr":
+				switch(timevartwo) {
+				case "ns":
+					amount = amount * 3.6e+12f;
+					break;
+				case "mcs":
+					amount = amount * 3.6e+9f;
+					break;
+				case "ms":
+					amount = amount * 3.6e+6f;
+					break;
+				case "sec":
+					amount = amount * 3600f;
+					break;
+				case "min":
+					amount = amount * 60f;
+					break;
+				case "day":
+					amount = amount * 0.0416667f;
+					break;
+				case "wk":
+					amount = amount * 0.00595238f;
+					break;
+				case "mth":
+					amount = amount * 0.00136986f;
+					break;
+				case "yr":
+					amount = amount * 0.000114155f;
+					break;
+				case "dd":
+					amount = amount * 1.14155e-5f;
+					break;
+				case "ct":
+					amount = amount * 1.14155e-6f;
+					break;
+				case "ml":
+					amount = amount * 1.14155e-7f;
+					break;
+					
+				}
+				
+				break;
+			case "day":
+				switch(timevartwo) {
+				case "ns":
+					amount = amount * 8.64e+13f;
+					break;
+				case "mcs":
+					amount = amount * 8.64e+10f;
+					break;
+				case "ms":
+					amount = amount * 8.64e+7f;
+					break;
+				case "sec":
+					amount = amount * 86400f;
+					break;
+				case "min":
+					amount = amount * 1440f;
+					break;
+				case "hr":
+					amount = amount * 24f;
+					break;
+				case "wk":
+					amount = amount * 0.142857f;
+					break;
+				case "mth":
+					amount = amount * 0.0328767f;
+					break;
+				case "yr":
+					amount = amount * 0.00273973f;
+					break;
+				case "dd":
+					amount = amount * 0.000273973f;
+					break;
+				case "ct":
+					amount = amount * 2.73973e-5f;
+					break;
+				case "ml":
+					amount = amount * 2.73973e-6f;
+					break;
+				}
+				
+				break;
+				
+			case "wk":
+				switch(timevartwo) {
+				case "ns":
+					amount = amount * 6.048e+14f;
+					break;
+				case "mcs":
+					amount = amount * 6.048e+11f;
+					break;
+				case "ms":
+					amount = amount * 6.048e+8f;
+					break;
+				case "sec":
+					amount = amount * 604800f;
+					break;
+				case "min":
+					amount = amount * 10080f;
+					break;
+				case "hr":
+					amount = amount * 168f;
+					break;
+				case "day":
+					amount = amount * 7f;
+					break;
+				case "mth":
+					amount = amount * 0.230137f;
+					break;
+				case "yr":
+					amount = amount * 0.0191781f;
+					break;
+				case "dd":
+					amount = amount * 0.00191781f;
+					break;
+				case "ct":
+					amount = amount * 0.000191781f;
+					break;
+				case "ml":
+					amount = amount * 1.91781e-5f;
+					break;
+				
+				}
+				
+				break;
+				
+				
+				
+		}
+		
+		System.out.println(amount);
+	
+		}
 	}
+	
+	
 
 	public static boolean checkertwodistance(String iti) {
 
@@ -756,6 +1191,22 @@ public class MetricConverter {
 
 	public static boolean checkeroweight(String ogotwo) {
 		if (Arrays.asList(checkerweight).contains(ogotwo)) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+	
+	public static boolean checkertwotime(String timevar){
+		if (Arrays.asList(checkertime).contains(timevar)) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+	
+	public static boolean checkerotime(String timevartwo){
+		if (Arrays.asList(checkertime).contains(timevartwo)) {
 			return true;
 		} else {
 			return false;
