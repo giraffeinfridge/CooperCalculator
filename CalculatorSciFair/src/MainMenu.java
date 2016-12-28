@@ -15,8 +15,10 @@ public class MainMenu {
 					+ "[4]  Force\n"
 					+ "[5]  Mass\n"
 					+ "Math\n"
-					+ "[6]  Basic Expression");
+					+ "[6]  Basic Expression\n"
+					+ "[7]  Quadratic Formula");
 			int input = in.nextInt();
+			System.out.println();
 			switch (input) {
 			case 0:
 				on = false;
@@ -38,6 +40,10 @@ public class MainMenu {
 			case 6:
 				BasicCalculator.init();
 				break;
+			case 7:
+				QuadraticCalculator.init();
+				break;
+				
 			}
 		}
 	}

@@ -6,13 +6,16 @@ public class MetricConverter {
 	public static String[] checkerdistance = { "mm", "cm", "in", "ft", "yrds", "m", "km", "mi" };
 
 	public static String[] checkerweight = { "oz", "mg", "g", "kg", "lbs", "mt" };
-	
-	public static String[] checkertime = { "ns", "mcs", "ms", "sec", "min", "hr", "day", "wk", "mth", "yr", "dd", "ct", "ml" };
+
+	public static String[] checkertime = { "ns", "mcs", "ms", "sec", "min", "hr", "day", "wk", "mth", "yr", "dd", "ct",
+			"ml" };
 
 	public static void main(String[] args) {
 
 		Scanner sdcalc = new Scanner(System.in);
 
+		boolean negchecker;
+		
 		String iti = null;
 
 		String unit = null;
@@ -26,8 +29,6 @@ public class MetricConverter {
 		System.out.println("Enter '2' for weight/mass conversion");
 		System.out.println();
 		System.out.println("Enter '3' for time conversion");
-		System.out.println();
-		System.out.println("Enter '4' for volume conversion");
 		System.out.println();
 
 		int option = sdcalc.nextInt();
@@ -83,12 +84,34 @@ public class MetricConverter {
 
 			float amount = sdcalc.nextFloat();
 
+			if (amount < 0) {
+				negchecker = false;
+				
+				while (negchecker == false) {
+					System.out.println();
+					System.out.println("Impossible value");
+					System.out.println();
+					System.out.println("Enter a valid value");
+					try {Thread.sleep(1000);
+					} catch (InterruptedException e) {System.out.println(e);}
+					System.out.println();
+					System.out.println("Amount of first unit?");
+					amount = sdcalc.nextFloat();
+					if (amount >= 0) {
+						negchecker = true;
+					}
+					else {}
+				}
+
+			}
+			
+			
 			System.out.println();
 
 			System.out.println("What unit are you converting to?");
 
 			String ititwo = sdcalc.next();
-			
+
 			while (!checkerodistance(ititwo)) {
 
 				System.out.println();
@@ -108,7 +131,7 @@ public class MetricConverter {
 				} catch (InterruptedException mate) {
 					System.out.println(mate);
 				}
-			
+
 				System.out.println();
 
 				System.out.println("What unit are you converting to?");
@@ -117,88 +140,63 @@ public class MetricConverter {
 			}
 
 			System.out.println("\n");
-			
+
 			switch (iti) {
 			case "mm":
-				System.out.print("millimeters");
-				unit = "mm";
+				unit = "millimeters";
 				break;
 			case "cm":
-				System.out.print("centimeters");
-				unit = "cm";
+				unit = "centimeters";
 				break;
 			case "in":
-				System.out.print("inches");
-				unit = "in";
+				unit = "inches";
 				break;
 			case "ft":
-				System.out.print("feet");
-				unit = "ft";
+				unit = "feet";
 				break;
 			case "yrds":
-				System.out.print("yards");
-				unit = "yrds";
+				unit = "yards";
 				break;
 			case "m":
-				System.out.print("meters");
-				unit = "m";
+				unit = "meters";
 				break;
 			case "km":
-				System.out.print("kilometers");
-				unit = "km";
+				unit = "kilometers";
 				break;
 			case "mi":
-				System.out.print("miles");
-				unit = "mi";
+				unit = "miles";
 				break;
 			}
-
-			System.out.print(" -> ");
 
 			switch (ititwo) {
 			case "mm":
-				System.out.print("millimeters");
-				unittwo = "mm";
+				unittwo = "millimeters";
 				break;
 			case "cm":
-				System.out.print("centimeters");
-				unittwo = "cm";
+				unittwo = "centimeters";
 				break;
 			case "in":
-				System.out.print("inches");
-				unittwo = "in";
+				unittwo = "inches";
 				break;
 			case "ft":
-				System.out.print("feet");
-				unittwo = "ft";
+				unittwo = "feet";
 				break;
 			case "yrds":
-				System.out.print("yards");
-				unittwo = "yrds";
+				unittwo = "yards";
 				break;
 			case "m":
-				System.out.print("meters");
-				unittwo = "m";
+				unittwo = "meters";
 				break;
 			case "km":
-				System.out.print("kilometers");
-				unittwo = "km";
+				unittwo = "kilometers";
 				break;
 			case "mi":
-				System.out.print("miles");
-				unit = "mi";
+				unittwo = "miles";
 				break;
 			}
 
-			System.out.println("\n\n\n");
-
-			System.out.println(amount + " " + unit + " = ? " + unittwo);
-
-			try {
-				Thread.sleep(1000);
-			} catch (InterruptedException balls) {
-				Thread.currentThread().interrupt();
-			}
+			System.out.println(unit + " -> " + unittwo);
+			System.out.println("\n\n" + amount + " " + unit + " = ? " + unittwo);
 
 			System.out.println();
 
@@ -468,6 +466,27 @@ public class MetricConverter {
 			System.out.println("Amount of first unit?");
 
 			float amount = sdcalc.nextFloat();
+			
+			if (amount < 0) {
+				negchecker = false;
+				
+				while (negchecker == false) {
+					System.out.println();
+					System.out.println("Impossible value");
+					System.out.println();
+					System.out.println("Enter a valid value");
+					try {Thread.sleep(1000);
+					} catch (InterruptedException e) {System.out.println(e);}
+					System.out.println();
+					System.out.println("Amount of first unit?");
+					amount = sdcalc.nextFloat();
+					if (amount >= 0) {
+						negchecker = true;
+					}
+					else {}
+				}
+
+			}
 
 			System.out.println();
 
@@ -502,80 +521,63 @@ public class MetricConverter {
 				ogotwo = sdcalc.next();
 			}
 
-			System.out.println();
-			
+			System.out.print("\n\n");
+
 			switch (ogo) {
 			case "oz":
-				unit = "oz";
-				System.out.print("ounces");
+				unit = "ounces";
 				break;
 
 			case "mg":
-				unit = "mg";
-				System.out.print("milligrams");
+				unit = "milligrams";
 				break;
 
 			case "g":
-				unit = "g";
-				System.out.print("grams");
+				unit = "grams";
 				break;
 
 			case "kg":
-				unit = "kg";
-				System.out.print("kilograms");
+				unit = "kilograms";
 				break;
 
 			case "lbs":
-				unit = "lbs";
-				System.out.print("lbs");
+				unit = "pounds";
 				break;
 
 			case "mt":
 				unit = "tons";
-				System.out.print("(metric) tons");
 				break;
-				
-			}
 
-			System.out.print(" -> ");
+			}
 
 			switch (ogotwo) {
 			case "oz":
-				unittwo = "oz";
-				System.out.println("ounces");
+				unittwo = "ounces";
 				break;
 
 			case "mg":
-				unittwo = "mg";
-				System.out.println("milligrams");
+				unittwo = "milligrams";
 				break;
 
 			case "g":
-				unittwo = "g";
-				System.out.println("grams");
+				unittwo = "grams";
 				break;
 
 			case "kg":
-				unittwo = "kg";
-				System.out.println("kilograms");
+				unittwo = "kilograms";
 				break;
 
 			case "lbs":
-				unittwo = "lbs";
-				System.out.println("lbs");
+				unittwo = "pounds";
 				break;
 
 			case "mt":
 				unittwo = "tons";
-				System.out.println("(metric) tons");
 				break;
 			}
 
-			System.out.println();
-			System.out.println();
-			System.out.println();
-
-			System.out.println(amount + " " + unit + " = ? " + unittwo);
+			System.out.println(unit + " -> " + unittwo);
+			System.out.println("\n\n" + amount + " " + unit + " = ? " + unittwo);
 
 			switch (ogo) {
 			case "oz":
@@ -716,100 +718,216 @@ public class MetricConverter {
 
 			}
 
+			System.out.println("\n");
+			System.out.println(amount + " " + unittwo);
 		}
+
+		//time
 		
-		if (option == 3){
-		System.out.println();
-		System.out.println("'ns'  : nanoseconds");
-		System.out.println("'mcs' : microseconds");
-		System.out.println("'ms'  : milliseconds");
-		System.out.println("'sec' : seconds");
-		System.out.println("'min' : minutes");
-		System.out.println("'hr'  : hours");
-		System.out.println("'day' : days");
-		System.out.println("'wk'  : weeks");
-		System.out.println("'mth' : months");
-		System.out.println("'yr'  : years");
-		System.out.println("'dd'  : decades");
-		System.out.println("'ct'  : centuries");
-		System.out.println("'ml'  : millenniums");
-		System.out.println();
-		
-		System.out.println("Use the abbreviation that corresponds with each unit \n");
-
-		System.out.println("Starting unit?");
-
-		String timevar = sdcalc.next();
-
-		while (!checkertwotime(timevar)) {
-
+		if (option == 3) {
+			System.out.println();
+			System.out.println("'ns'  : nanoseconds");
+			System.out.println("'mcs' : microseconds");
+			System.out.println("'ms'  : milliseconds");
+			System.out.println("'sec' : seconds");
+			System.out.println("'min' : minutes");
+			System.out.println("'hr'  : hours");
+			System.out.println("'day' : days");
+			System.out.println("'wk'  : weeks");
+			System.out.println("'mth' : months");
+			System.out.println("'yr'  : years");
+			System.out.println("'dd'  : decades");
+			System.out.println("'ct'  : centuries");
+			System.out.println("'ml'  : millenniums");
 			System.out.println();
 
-			System.out.println("This unit is invalid");
-
-			try {
-				Thread.sleep(1000);
-			} catch (InterruptedException mate) {
-				System.out.println(mate);
-			}
-
-			System.out.println("Enter a valid unit");
-
-			try {
-				Thread.sleep(500);
-			} catch (InterruptedException mate) {
-				System.out.println(mate);
-			}
-
-			System.out.println();
+			System.out.println("Use the abbreviation that corresponds with each unit \n");
 
 			System.out.println("Starting unit?");
 
-			timevar = sdcalc.next();
-		}
+			String timevar = sdcalc.next();
 
-		System.out.println();
+			while (!checkertwotime(timevar)) {
 
-		System.out.println("Amount of first unit?");
+				System.out.println();
 
-		float amount = sdcalc.nextFloat();
+				System.out.println("This unit is invalid");
 
-		System.out.println();
+				try {
+					Thread.sleep(1000);
+				} catch (InterruptedException mate) {
+					System.out.println(mate);
+				}
 
-		System.out.println("What unit are you converting to?");
+				System.out.println("Enter a valid unit");
 
-		String timevartwo = sdcalc.next();
-		
-		while (!checkerotime(timevartwo)) {
+				try {
+					Thread.sleep(500);
+				} catch (InterruptedException mate) {
+					System.out.println(mate);
+				}
+
+				System.out.println();
+
+				System.out.println("Starting unit?");
+
+				timevar = sdcalc.next();
+			}
 
 			System.out.println();
 
-			System.out.println("This unit is invalid");
+			System.out.println("Amount of first unit?");
 
-			try {
-				Thread.sleep(1000);
-			} catch (InterruptedException mate) {
-				System.out.println(mate);
+			float amount = sdcalc.nextFloat();
+			
+			if (amount < 0) {
+				negchecker = false;
+				
+				while (negchecker == false) {
+					System.out.println();
+					System.out.println("Impossible value");
+					System.out.println();
+					System.out.println("Enter a valid value");
+					try {Thread.sleep(1000);
+					} catch (InterruptedException e) {System.out.println(e);}
+					System.out.println();
+					System.out.println("Amount of first unit?");
+					amount = sdcalc.nextFloat();
+					if (amount >= 0) {
+						negchecker = true;
+					}
+					else {}
+				}
+
 			}
 
-			System.out.println("Enter a valid unit");
-
-			try {
-				Thread.sleep(500);
-			} catch (InterruptedException mate) {
-				System.out.println(mate);
-			}
-		
 			System.out.println();
 
 			System.out.println("What unit are you converting to?");
 
-			timevartwo = sdcalc.next();
-		}
+			String timevartwo = sdcalc.next();
 
-		System.out.println("\n");
+			while (!checkerotime(timevartwo)) {
 
-		switch (timevar) {
+				System.out.println();
+
+				System.out.println("This unit is invalid");
+
+				try {
+					Thread.sleep(1000);
+				} catch (InterruptedException mate) {
+					System.out.println(mate);
+				}
+
+				System.out.println("Enter a valid unit");
+
+				try {
+					Thread.sleep(500);
+				} catch (InterruptedException mate) {
+					System.out.println(mate);
+				}
+
+				System.out.println();
+
+				System.out.println("What unit are you converting to?");
+
+				timevartwo = sdcalc.next();
+			}
+
+			System.out.println("\n");
+
+			switch (timevar) {
+			
+			case "ns":
+				unit = "nanoseconds";
+				break;
+			case "mcs":
+				unit = "microseconds";
+				break;
+			case "ms":
+				unit = "milliseconds";
+				break;
+			case "sec":
+				unit = "seconds";
+				break;
+			case "min":
+				unit = "minutes";
+				break;
+			case "hr":
+				unit = "hours";
+				break;
+			case "day":
+				unit = "days";
+				break;
+			case "wk":
+				unit = "weeks";
+				break;
+			case "mth":
+				unit = "months";
+				break;
+			case "yr":
+				unit = "years";
+				break;
+			case "dd":
+				unit = "decades";
+				break;
+			case "ct":
+				unit = "centuries";
+				break;
+			case "ml":
+				unit = "millenniums";
+				break;
+			
+			}
+			
+			switch (timevartwo) {
+			
+			case "ns":
+				unittwo = "nanoseconds";
+				break;
+			case "mcs":
+				unittwo = "microseconds";
+				break;
+			case "ms":
+				unittwo = "milliseconds";
+				break;
+			case "sec":
+				unittwo = "seconds";
+				break;
+			case "min":
+				unittwo = "minutes";
+				break;
+			case "hr":
+				unittwo = "hours";
+				break;
+			case "day":
+				unittwo = "days";
+				break;
+			case "wk":
+				unittwo = "weeks";
+				break;
+			case "mth":
+				unittwo = "months";
+				break;
+			case "yr":
+				unittwo = "years";
+				break;
+			case "dd":
+				unittwo = "decades";
+				break;
+			case "ct":
+				unittwo = "centuries";
+				break;
+			case "ml":
+				unittwo = "millenniums";
+				break;
+			
+			}
+			
+			System.out.println(unit + " -> " + unittwo + "\n\n");
+			System.out.println(amount + " " + unit + " = ? " + unittwo + "\n\n");
+			
+			switch (timevar) {
 			case "ns":
 				switch (timevartwo) {
 				case "mcs":
@@ -849,9 +967,9 @@ public class MetricConverter {
 					amount = amount * 0.0000000000000000000317098f;
 					break;
 				}
-				
+
 				break;
-			
+
 			case "mcs":
 				switch (timevartwo) {
 				case "ns":
@@ -889,55 +1007,55 @@ public class MetricConverter {
 					break;
 				case "ml":
 					amount = amount * 3.17098e-17f;
-				
+
 				}
-				
+
 				break;
-				
+
 			case "ms":
 				switch (timevartwo) {
-					case "ns":
-						amount = amount * 1000000f;
-						break;
-					case "mcs":
-						amount = amount * 1000f;
-						break;
-					case "sec":
-						amount = amount * 0.001f;
-						break;
-					case "min":
-						amount = amount * 1.6667e-5f;
-						break;
-					case "hr":
-						amount = amount * 2.77778e-7f;
-						break;
-					case "day":
-						amount = amount * 1.15741e-8f;
-						break;
-					case "wk":
-						amount = amount * 1.65344e-9f;
-						break;
-					case "mth":
-						amount = amount * 3.80517e-10f;
-						break;
-					case "yr":
-						amount = amount * 3.17098e-11f;
-						break;
-					case "dd":
-						amount = amount * 3.17098e-12f;
-						break;
-					case "ct":
-						amount = amount * 3.17098e-13f;
-						break;
-					case "ml":
-						amount = amount * 3.17098e-14f;
-						break;
+				case "ns":
+					amount = amount * 1000000f;
+					break;
+				case "mcs":
+					amount = amount * 1000f;
+					break;
+				case "sec":
+					amount = amount * 0.001f;
+					break;
+				case "min":
+					amount = amount * 1.6667e-5f;
+					break;
+				case "hr":
+					amount = amount * 2.77778e-7f;
+					break;
+				case "day":
+					amount = amount * 1.15741e-8f;
+					break;
+				case "wk":
+					amount = amount * 1.65344e-9f;
+					break;
+				case "mth":
+					amount = amount * 3.80517e-10f;
+					break;
+				case "yr":
+					amount = amount * 3.17098e-11f;
+					break;
+				case "dd":
+					amount = amount * 3.17098e-12f;
+					break;
+				case "ct":
+					amount = amount * 3.17098e-13f;
+					break;
+				case "ml":
+					amount = amount * 3.17098e-14f;
+					break;
 				}
-				
+
 				break;
-			
+
 			case "sec":
-				switch(timevartwo) {
+				switch (timevartwo) {
 				case "ns":
 					amount = amount * 1e+9f;
 					break;
@@ -974,13 +1092,13 @@ public class MetricConverter {
 				case "ml":
 					amount = amount * 3.17098e-11f;
 					break;
-				
+
 				}
-				
+
 				break;
-			
+
 			case "min":
-				switch(timevartwo) {
+				switch (timevartwo) {
 				case "ns":
 					amount = amount * 6e+10f;
 					break;
@@ -1016,13 +1134,13 @@ public class MetricConverter {
 					break;
 				case "ml":
 					amount = amount * 1.90259e-9f;
-				
+
 				}
-				
+
 				break;
-				
+
 			case "hr":
-				switch(timevartwo) {
+				switch (timevartwo) {
 				case "ns":
 					amount = amount * 3.6e+12f;
 					break;
@@ -1059,12 +1177,12 @@ public class MetricConverter {
 				case "ml":
 					amount = amount * 1.14155e-7f;
 					break;
-					
+
 				}
-				
+
 				break;
 			case "day":
-				switch(timevartwo) {
+				switch (timevartwo) {
 				case "ns":
 					amount = amount * 8.64e+13f;
 					break;
@@ -1102,11 +1220,11 @@ public class MetricConverter {
 					amount = amount * 2.73973e-6f;
 					break;
 				}
-				
+
 				break;
-				
+
 			case "wk":
-				switch(timevartwo) {
+				switch (timevartwo) {
 				case "ns":
 					amount = amount * 6.048e+14f;
 					break;
@@ -1143,21 +1261,233 @@ public class MetricConverter {
 				case "ml":
 					amount = amount * 1.91781e-5f;
 					break;
-				
+
 				}
-				
+
 				break;
-				
-				
-				
+
+			case "mth":
+				switch (timevartwo) {
+				case "ns":
+					amount = amount * 2.628e+15f;
+					break;
+				case "mcs":
+					amount = amount * 2.628e+12f;
+					break;
+				case "ms":
+					amount = amount * 2.628e+9f;
+					break;
+				case "sec":
+					amount = amount * 2.628e+6f;
+					break;
+				case "min":
+					amount = amount * 43800f;
+					break;
+				case "hr":
+					amount = amount * 730.001f;
+					break;
+				case "day":
+					amount = amount * 30.4167f;
+					break;
+				case "wk":
+					amount = amount * 4.34524f;
+					break;
+				case "yr":
+					amount = amount * 0.0833334f;
+					break;
+				case "dd":
+					amount = amount * 0.00833334f;
+					break;
+				case "ct":
+					amount = amount * 0.000833334f;
+					break;
+				case "ml":
+					amount = amount * 8.33334e-5f;
+					break;
+
+				}
+
+				break;
+
+			case "yr":
+				switch (timevartwo) {
+				case "ns":
+					amount = amount * 3.154e+16f;
+					break;
+				case "mcs":
+					amount = amount * 3.154e+13f;
+					break;
+				case "ms":
+					amount = amount * 3.154e+10f;
+					break;
+				case "sec":
+					amount = amount * 3.154e+7f;
+					break;
+				case "min":
+					amount = amount * 525600f;
+					break;
+				case "hr":
+					amount = amount * 8760f;
+					break;
+				case "day":
+					amount = amount * 365f;
+					break;
+				case "wk":
+					amount = amount * 52.1429f;
+					break;
+				case "mth":
+					amount = amount * 12f;
+					break;
+				case "dd":
+					amount = amount * 0.1f;
+					break;
+				case "ct":
+					amount = amount * 0.01f;
+					break;
+				case "ml":
+					amount = amount * 0.001f;
+					break;
+
+				}
+
+				break;
+
+			case "dd":
+				switch (timevartwo) {
+				case "ns":
+					amount = amount * 3.154e+17f;
+					break;
+				case "mcs":
+					amount = amount * 3.154e+14f;
+					break;
+				case "ms":
+					amount = amount * 3.154e+11f;
+					break;
+				case "sec":
+					amount = amount * 3.154e+8f;
+					break;
+				case "min":
+					amount = amount * 5.256e+6f;
+					break;
+				case "hr":
+					amount = amount * 87600f;
+					break;
+				case "day":
+					amount = amount * 3650f;
+					break;
+				case "wk":
+					amount = amount * 521.429f;
+					break;
+				case "mth":
+					amount = amount * 120f;
+					break;
+				case "yr":
+					amount = amount * 10f;
+					break;
+				case "ct":
+					amount = amount * 0.1f;
+					break;
+				case "ml":
+					amount = amount * 0.01f;
+					break;
+
+				}
+
+				break;
+
+			case "ct":
+				switch (timevartwo) {
+				case "ns":
+					amount = amount * 3.154e+18f;
+					break;
+				case "mcs":
+					amount = amount * 3.154e+15f;
+					break;
+				case "ms":
+					amount = amount * 3.154e+12f;
+					break;
+				case "sec":
+					amount = amount * 3.154e+9f;
+					break;
+				case "min":
+					amount = amount * 5.256e+7f;
+					break;
+				case "hr":
+					amount = amount * 876000f;
+					break;
+				case "day":
+					amount = amount * 36500f;
+					break;
+				case "wk":
+					amount = amount * 5214.29f;
+					break;
+				case "mth":
+					amount = amount * 1200f;
+					break;
+				case "yr":
+					amount = amount * 100f;
+					break;
+				case "dd":
+					amount = amount * 10f;
+					break;
+				case "ml":
+					amount = amount * 0.1f;
+					break;
+
+				}
+
+				break;
+
+			case "ml":
+				switch (timevartwo) {
+				case "ns":
+					amount = amount * 3.154e+19f;
+					break;
+				case "mcs":
+					amount = amount * 3.154e+16f;
+					break;
+				case "ms":
+					amount = amount * 3.154e+13f;
+					break;
+				case "sec":
+					amount = amount * 3.154e+10f;
+					break;
+				case "min":
+					amount = amount * 5.256e+8f;
+					break;
+				case "hr":
+					amount = amount * 8.76e+6f;
+					break;
+				case "day":
+					amount = amount * 365000f;
+					break;
+				case "wk":
+					amount = amount * 52142.9f;
+					break;
+				case "mth":
+					amount = amount * 12000f;
+					break;
+				case "yr":
+					amount = amount * 1000f;
+					break;
+				case "dd":
+					amount = amount * 100f;
+					break;
+				case "ct":
+					amount = amount * 10f;
+					break;
+
+				}
+
+				break;
+
+			}
+
+			System.out.println(amount + " " + unittwo);
+
 		}
-		
-		System.out.println(amount);
-	
-		}
+
 	}
-	
-	
 
 	public static boolean checkertwodistance(String iti) {
 
@@ -1196,16 +1526,16 @@ public class MetricConverter {
 			return false;
 		}
 	}
-	
-	public static boolean checkertwotime(String timevar){
+
+	public static boolean checkertwotime(String timevar) {
 		if (Arrays.asList(checkertime).contains(timevar)) {
 			return true;
 		} else {
 			return false;
 		}
 	}
-	
-	public static boolean checkerotime(String timevartwo){
+
+	public static boolean checkerotime(String timevartwo) {
 		if (Arrays.asList(checkertime).contains(timevartwo)) {
 			return true;
 		} else {

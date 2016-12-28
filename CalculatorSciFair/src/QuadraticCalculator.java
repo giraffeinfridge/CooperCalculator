@@ -1,7 +1,7 @@
 import java.util.Scanner;
 public class QuadraticCalculator {
 
-	public static void main(String[] args) {
+	public static void init() {
 		Scanner quad = new Scanner (System.in);
 		
 		float one;
